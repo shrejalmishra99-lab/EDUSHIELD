@@ -356,19 +356,23 @@ st.markdown("""
 import os
 
 def _get_api_key():
-    # 1️⃣ Try Streamlit secrets (Streamlit Cloud deployment)
+    # 1️⃣ PRIORITIZE Session State (What you manually type in the UI)
+    # This ensures that if you enter a working key, it overrides the broken Cloud secret.
+    if "_groq_api_key" in st.session_state and st.session_state["_groq_api_key"]:
+        return st.session_state["_groq_api_key"]
+        
+    # 2️⃣ TRY Streamlit secrets (Cloud deployment)
     try:
         if "GROQ_API_KEY" in st.secrets and st.secrets["GROQ_API_KEY"]:
-            return st.secrets["GROQ_API_KEY"]
+            # Basic validation to ensure it's not a placeholder
+            val = st.secrets["GROQ_API_KEY"]
+            if val.startswith("gsk_") and len(val) > 20:
+                return val
     except Exception:
         pass
-    # 2️⃣ Try environment variable (local .env or system)
-    key = os.environ.get("GROQ_API_KEY", "")
-    if key:
-        return key
-    # 3️⃣ Try session state (user entered it in the UI)
-    return st.session_state.get("_groq_api_key", "")
-
+        
+    # 3️⃣ TRY environment variable (Local VS Code)
+    return os.environ.get("GROQ_API_KEY", "")
 _api_key = _get_api_key()
 
 if not _api_key:
