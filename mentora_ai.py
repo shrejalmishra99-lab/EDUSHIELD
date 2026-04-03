@@ -40,34 +40,33 @@ st.markdown("""
     header[data-testid="stHeader"] { height: 0 !important; overflow: hidden !important; }
     #MainMenu, footer { visibility: hidden !important; }
 
-    /* ══ PAGE BACKGROUND ══ */
+    /* ══ DARK BLUE & BLACK PAGE BACKGROUND ══ */
     .stApp {
-        background: #f8f7ff !important;
+        background: #050a15 !important;
         font-family: 'Poppins', sans-serif !important;
     }
     .main .block-container { padding-top: 1rem !important; max-width: 1200px !important; }
 
-    /* ══ GLOBAL TEXT — ALWAYS DARK ON LIGHT BG ══ */
+    /* ══ GLOBAL TEXT — WHITE ON DARK BG ══ */
     .stApp, .stApp * {
-        color: #1a1a2e !important;
+        color: #e2e8f0 !important;
     }
-    /* Override only where white text is needed (handled inline) */
 
     /* ══ HEADINGS ══ */
     h1, h2, h3, h4, h5, h6 {
         font-family: 'Poppins', sans-serif !important;
         font-weight: 700 !important;
-        color: #3b0764 !important;
+        color: #60a5fa !important;
     }
 
-    /* ══ INPUTS — white bg, dark text ══ */
+    /* ══ INPUTS — dark bg, light text ══ */
     .stTextInput > div > div > input,
     .stNumberInput > div > div > input,
     .stTextArea > div > div > textarea,
     .stDateInput > div > div > input {
-        background: #ffffff !important;
-        color: #1a1a2e !important;
-        border: 2px solid #7c3aed !important;
+        background: #0f1729 !important;
+        color: #e2e8f0 !important;
+        border: 2px solid #1e40af !important;
         border-radius: 10px !important;
         font-family: 'Inter', sans-serif !important;
         font-size: 0.92rem !important;
@@ -76,59 +75,58 @@ st.markdown("""
     .stTextInput > div > div > input:focus,
     .stNumberInput > div > div > input:focus,
     .stTextArea > div > div > textarea:focus {
-        border-color: #4f46e5 !important;
-        box-shadow: 0 0 0 3px rgba(124,58,237,0.18) !important;
+        border-color: #3b82f6 !important;
+        box-shadow: 0 0 0 3px rgba(59,130,246,0.25) !important;
         outline: none !important;
     }
-    /* Placeholder text */
     .stTextInput > div > div > input::placeholder,
-    .stTextArea > div > div > textarea::placeholder { color: #9ca3af !important; }
+    .stTextArea > div > div > textarea::placeholder { color: #64748b !important; }
 
     /* ══ SELECTBOX ══ */
     .stSelectbox > div > div,
     [data-baseweb="select"] > div {
-        background: #ffffff !important;
-        color: #1a1a2e !important;
-        border: 2px solid #7c3aed !important;
+        background: #0f1729 !important;
+        color: #e2e8f0 !important;
+        border: 2px solid #1e40af !important;
         border-radius: 10px !important;
     }
     [data-baseweb="popover"] li,
     [role="option"] {
-        background: #ffffff !important;
-        color: #1a1a2e !important;
+        background: #0f1729 !important;
+        color: #e2e8f0 !important;
     }
-    [role="option"]:hover { background: #f5f3ff !important; }
+    [role="option"]:hover { background: #1e3a6b !important; }
 
     /* ══ LABELS ══ */
     .stTextInput label, .stTextArea label, .stNumberInput label,
     .stSelectbox label, .stSlider label, .stRadio label,
     .stDateInput label, .stCheckbox label, .stMultiSelect label {
-        color: #4c1d95 !important;
+        color: #93c5fd !important;
         font-weight: 600 !important;
         font-size: 0.87rem !important;
     }
 
     /* ══ RADIO & CHECKBOX ══ */
-    .stRadio > div > label { color: #1a1a2e !important; }
-    .stRadio > div > label > div > p { color: #1a1a2e !important; }
-    .stCheckbox > label > div > p { color: #1a1a2e !important; }
+    .stRadio > div > label { color: #e2e8f0 !important; }
+    .stRadio > div > label > div > p { color: #e2e8f0 !important; }
+    .stCheckbox > label > div > p { color: #e2e8f0 !important; }
 
-    /* ══ BUTTONS — purple, white text ══ */
+    /* ══ BUTTONS — blue gradient ══ */
     .stButton > button {
-        background: linear-gradient(135deg, #7c3aed, #4f46e5) !important;
+        background: linear-gradient(135deg, #1d4ed8, #1e40af) !important;
         color: #ffffff !important;
-        border: none !important;
+        border: 1px solid #3b82f6 !important;
         border-radius: 12px !important;
         font-weight: 700 !important;
         font-size: 0.88rem !important;
         padding: 0.5rem 1.4rem !important;
         transition: all 0.25s ease !important;
-        box-shadow: 0 4px 12px rgba(124,58,237,0.3) !important;
+        box-shadow: 0 4px 12px rgba(29,78,216,0.4) !important;
     }
     .stButton > button:hover {
         transform: translateY(-2px) !important;
-        box-shadow: 0 8px 24px rgba(124,58,237,0.45) !important;
-        background: linear-gradient(135deg, #6d28d9, #4338ca) !important;
+        box-shadow: 0 8px 24px rgba(59,130,246,0.5) !important;
+        background: linear-gradient(135deg, #2563eb, #1d4ed8) !important;
     }
     .stButton > button p,
     .stButton > button span,
@@ -136,30 +134,31 @@ st.markdown("""
 
     /* Form submit */
     .stFormSubmitButton > button {
-        background: linear-gradient(135deg, #059669, #047857) !important;
+        background: linear-gradient(135deg, #0891b2, #0e7490) !important;
         color: #ffffff !important;
-        border: none !important;
+        border: 1px solid #22d3ee !important;
         border-radius: 12px !important;
         font-weight: 700 !important;
         padding: 0.5rem 1.4rem !important;
-        box-shadow: 0 4px 12px rgba(5,150,105,0.3) !important;
+        box-shadow: 0 4px 12px rgba(8,145,178,0.4) !important;
     }
     .stFormSubmitButton > button p,
     .stFormSubmitButton > button span { color: #ffffff !important; }
     .stFormSubmitButton > button:hover {
         transform: translateY(-2px) !important;
-        box-shadow: 0 8px 20px rgba(5,150,105,0.45) !important;
+        box-shadow: 0 8px 20px rgba(34,211,238,0.45) !important;
     }
 
     /* ══ TABS ══ */
     .stTabs [data-baseweb="tab-list"] {
-        background: #ede9fe !important;
+        background: #0f1729 !important;
         border-radius: 12px !important;
         padding: 4px !important;
         gap: 4px !important;
+        border: 1px solid #1e3a6b !important;
     }
     .stTabs [data-baseweb="tab"] {
-        color: #4c1d95 !important;
+        color: #93c5fd !important;
         font-weight: 600 !important;
         font-size: 0.82rem !important;
         border-radius: 8px !important;
@@ -167,7 +166,7 @@ st.markdown("""
         background: transparent !important;
     }
     .stTabs [aria-selected="true"] {
-        background: #7c3aed !important;
+        background: linear-gradient(135deg,#1d4ed8,#1e40af) !important;
         color: #ffffff !important;
         font-weight: 700 !important;
     }
@@ -175,47 +174,46 @@ st.markdown("""
 
     /* ══ SIDEBAR ══ */
     [data-testid="stSidebar"] {
-        background: #ffffff !important;
-        border-right: 2px solid #ede9fe !important;
-        box-shadow: 2px 0 12px rgba(124,58,237,0.08) !important;
+        background: #070d1a !important;
+        border-right: 2px solid #1e3a6b !important;
+        box-shadow: 2px 0 16px rgba(29,78,216,0.15) !important;
     }
     [data-testid="stSidebar"] p,
     [data-testid="stSidebar"] span,
     [data-testid="stSidebar"] label,
-    [data-testid="stSidebar"] div { color: #1a1a2e !important; }
+    [data-testid="stSidebar"] div { color: #e2e8f0 !important; }
     [data-testid="stSidebar"] h1,
     [data-testid="stSidebar"] h2,
-    [data-testid="stSidebar"] h3 { color: #3b0764 !important; }
+    [data-testid="stSidebar"] h3 { color: #60a5fa !important; }
     [data-testid="stSidebar"] .stTextInput > div > div > input,
     [data-testid="stSidebar"] .stNumberInput > div > div > input {
-        background: #f5f3ff !important;
-        color: #1a1a2e !important;
-        border: 1.5px solid #7c3aed !important;
+        background: #0f1729 !important;
+        color: #e2e8f0 !important;
+        border: 1.5px solid #1e40af !important;
         border-radius: 10px !important;
     }
     [data-testid="stSidebar"] .stSelectbox > div > div {
-        background: #f5f3ff !important;
-        border: 1.5px solid #7c3aed !important;
+        background: #0f1729 !important;
+        border: 1.5px solid #1e40af !important;
         border-radius: 10px !important;
     }
 
-    /* ══ EXPANDER (used only for PYQ Solutions now) ══ */
+    /* ══ EXPANDER ══ */
     [data-testid="stExpander"] {
-        border: 1.5px solid #ddd6fe !important;
+        border: 1.5px solid #1e3a6b !important;
         border-radius: 12px !important;
-        background: #ffffff !important;
+        background: #0a1020 !important;
         margin-bottom: 8px !important;
     }
     [data-testid="stExpander"] details summary {
-        background: #f5f3ff !important;
+        background: #0f1729 !important;
         border-radius: 10px !important;
         padding: 12px 16px !important;
         font-weight: 600 !important;
     }
-    [data-testid="stExpander"] details summary:hover { background: #ede9fe !important; }
+    [data-testid="stExpander"] details summary:hover { background: #1e3a6b !important; }
     [data-testid="stExpander"] details summary p,
-    [data-testid="stExpander"] details summary span { color: #4c1d95 !important; font-weight: 600 !important; }
-    /* Hide the raw text arrow node completely, show only SVG */
+    [data-testid="stExpander"] details summary span { color: #93c5fd !important; font-weight: 600 !important; }
     [data-testid="stExpanderToggleIcon"] {
         display: none !important;
         visibility: hidden !important;
@@ -228,103 +226,118 @@ st.markdown("""
 
     /* ══ ALERTS ══ */
     .stAlert { border-radius: 12px !important; }
-    .stAlert p, .stAlert div, .stAlert span { color: #1a1a2e !important; }
-    /* Info */
-    [data-testid="stNotification"][kind="info"] { background: #eff6ff !important; border-left: 4px solid #3b82f6 !important; }
-    /* Success */
-    [data-testid="stNotification"][kind="success"] { background: #f0fdf4 !important; border-left: 4px solid #22c55e !important; }
-    /* Warning */
-    [data-testid="stNotification"][kind="warning"] { background: #fffbeb !important; border-left: 4px solid #f59e0b !important; }
-    /* Error */
-    [data-testid="stNotification"][kind="error"] { background: #fef2f2 !important; border-left: 4px solid #ef4444 !important; }
+    .stAlert p, .stAlert div, .stAlert span { color: #e2e8f0 !important; }
+    [data-testid="stNotification"][kind="info"] { background: #0c1a2e !important; border-left: 4px solid #3b82f6 !important; }
+    [data-testid="stNotification"][kind="success"] { background: #0a1f15 !important; border-left: 4px solid #22c55e !important; }
+    [data-testid="stNotification"][kind="warning"] { background: #1a1300 !important; border-left: 4px solid #f59e0b !important; }
+    [data-testid="stNotification"][kind="error"] { background: #1a0a0a !important; border-left: 4px solid #ef4444 !important; }
 
     /* ══ DATAFRAME ══ */
     .stDataFrame { border-radius: 12px !important; overflow: hidden !important; }
-    .stDataFrame td, .stDataFrame th { color: #1a1a2e !important; }
+    .stDataFrame td, .stDataFrame th { color: #e2e8f0 !important; background: #0a1020 !important; }
 
-    /* ══ METRICS (st.metric) ══ */
+    /* ══ METRICS ══ */
     [data-testid="stMetric"] {
-        background: #ffffff !important;
-        border: 2px solid #c4b5fd !important;
+        background: #0a1020 !important;
+        border: 2px solid #1e3a6b !important;
         border-radius: 14px !important;
         padding: 16px !important;
     }
-    [data-testid="stMetricValue"] { color: #7c3aed !important; font-weight: 700 !important; }
-    [data-testid="stMetricLabel"] { color: #4c1d95 !important; }
-    [data-testid="stMetricDelta"] { color: #059669 !important; }
+    [data-testid="stMetricValue"] { color: #60a5fa !important; font-weight: 700 !important; }
+    [data-testid="stMetricLabel"] { color: #93c5fd !important; }
+    [data-testid="stMetricDelta"] { color: #34d399 !important; }
 
     /* ══ CHAT BUBBLES ══ */
     .chat-user {
-        background: linear-gradient(135deg, #ede9fe, #ddd6fe) !important;
+        background: linear-gradient(135deg, #0c1a2e, #1e3a6b) !important;
         border-radius: 18px 18px 4px 18px !important;
         padding: 12px 18px !important;
         margin: 8px 0 4px 30px !important;
-        border-left: 4px solid #7c3aed !important;
+        border-left: 4px solid #3b82f6 !important;
         font-size: 0.9rem !important;
     }
     .chat-ai {
-        background: linear-gradient(135deg, #f0fdf4, #dcfce7) !important;
+        background: linear-gradient(135deg, #071a10, #0a2e1a) !important;
         border-radius: 18px 18px 18px 4px !important;
         padding: 12px 18px !important;
         margin: 4px 30px 8px 0 !important;
-        border-left: 4px solid #16a34a !important;
+        border-left: 4px solid #22c55e !important;
         font-size: 0.9rem !important;
     }
-    .chat-user *, .chat-ai * { color: #1a1a2e !important; }
+    .chat-user *, .chat-ai * { color: #e2e8f0 !important; }
 
     /* ══ CUSTOM CARDS ══ */
     .metric-card {
-        background: #ffffff !important;
-        border: 2px solid #c4b5fd !important;
+        background: #0a1020 !important;
+        border: 2px solid #1e3a6b !important;
         border-radius: 18px !important;
         padding: 22px !important;
         text-align: center !important;
-        box-shadow: 0 4px 16px rgba(124,58,237,0.1) !important;
+        box-shadow: 0 4px 16px rgba(29,78,216,0.2) !important;
         margin-bottom: 10px !important;
     }
-    .metric-card h2 { color: #7c3aed !important; font-size: 1.8rem !important; margin: 0 !important; font-family: 'Orbitron', sans-serif !important; }
-    .metric-card p  { color: #4c1d95 !important; margin: 6px 0 0 0 !important; font-size: 0.85rem !important; font-weight: 500 !important; }
+    .metric-card h2 { color: #60a5fa !important; font-size: 1.8rem !important; margin: 0 !important; font-family: 'Orbitron', sans-serif !important; }
+    .metric-card p  { color: #93c5fd !important; margin: 6px 0 0 0 !important; font-size: 0.85rem !important; font-weight: 500 !important; }
     .badge-green  { background: linear-gradient(135deg,#16a34a,#15803d); color: #fff !important; border-radius: 8px; padding: 5px 14px; font-weight: 700; display:inline-block; }
     .badge-orange { background: linear-gradient(135deg,#d97706,#b45309); color: #fff !important; border-radius: 8px; padding: 5px 14px; font-weight: 700; display:inline-block; }
     .badge-red    { background: linear-gradient(135deg,#dc2626,#b91c1c); color: #fff !important; border-radius: 8px; padding: 5px 14px; font-weight: 700; display:inline-block; }
 
     /* ══ PHASE HEADER & BRANDING ══ */
-    .phase-header { background: linear-gradient(90deg,#7c3aed,#4f46e5,#0ea5e9); border-radius: 14px; padding: 16px 24px; margin-bottom: 20px; color: #ffffff !important; font-size: 1.2rem; font-weight: 700; box-shadow: 0 6px 20px rgba(124,58,237,0.3); }
+    .phase-header { background: linear-gradient(90deg,#1d4ed8,#1e40af,#0891b2); border-radius: 14px; padding: 16px 24px; margin-bottom: 20px; color: #ffffff !important; font-size: 1.2rem; font-weight: 700; box-shadow: 0 6px 20px rgba(29,78,216,0.4); }
     .phase-header * { color: #ffffff !important; }
-    .mentora-logo { font-family: 'Orbitron', sans-serif !important; font-size: 2.8rem; font-weight: 900; background: linear-gradient(135deg,#7c3aed,#4f46e5,#06b6d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; letter-spacing: 3px; text-align: center; display: block; padding: 10px 0 0 0; }
-    .mentora-tagline { font-size: 0.85rem; color: #7c3aed !important; text-align: center; letter-spacing: 4px; text-transform: uppercase; display: block; margin-top: -4px; }
-    .mentora-divider { height: 3px; background: linear-gradient(90deg,transparent,#7c3aed,#4f46e5,#06b6d4,transparent); border: none; border-radius: 2px; margin: 8px auto 16px auto; width: 80%; }
-    .login-logo { font-family: 'Orbitron', sans-serif !important; font-size: 2.4rem; font-weight: 900; background: linear-gradient(135deg,#7c3aed,#4f46e5,#06b6d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; letter-spacing: 3px; text-align: center; display: block; margin-bottom: 4px; }
-    .login-tagline { font-size: 0.78rem; color: #7c3aed !important; letter-spacing: 3px; text-transform: uppercase; text-align: center; display: block; margin-bottom: 4px; }
-    .login-divider { height: 3px; background: linear-gradient(90deg,transparent,#7c3aed,#06b6d4,transparent); border: none; border-radius: 2px; margin: 8px auto 28px auto; width: 55%; }
-    .login-card { background: #ffffff; border: 2px solid #c4b5fd; border-radius: 24px; padding: 32px 30px 26px 30px; box-shadow: 0 12px 40px rgba(124,58,237,0.15); }
-    .login-card-title { font-size: 1.2rem; font-weight: 700; color: #4c1d95; text-align: center; margin: 0 0 6px 0; }
-    .login-card-sub { font-size: 0.78rem; color: #6b7280; text-align: center; margin: 0 0 22px 0; }
-    .demo-box { background: linear-gradient(135deg,#f5f3ff,#ede9fe); border: 1px solid #ddd6fe; border-radius: 12px; padding: 12px 16px; margin-top: 16px; font-size: 0.76rem; color: #4c1d95; text-align: center; line-height: 1.8; }
+    .mentora-logo { font-family: 'Orbitron', sans-serif !important; font-size: 2.8rem; font-weight: 900; background: linear-gradient(135deg,#3b82f6,#1d4ed8,#06b6d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; letter-spacing: 3px; text-align: center; display: block; padding: 10px 0 0 0; }
+    .mentora-tagline { font-size: 0.85rem; color: #60a5fa !important; text-align: center; letter-spacing: 4px; text-transform: uppercase; display: block; margin-top: -4px; }
+    .mentora-divider { height: 3px; background: linear-gradient(90deg,transparent,#1d4ed8,#3b82f6,#06b6d4,transparent); border: none; border-radius: 2px; margin: 8px auto 16px auto; width: 80%; }
+    .login-logo { font-family: 'Orbitron', sans-serif !important; font-size: 2.4rem; font-weight: 900; background: linear-gradient(135deg,#3b82f6,#1d4ed8,#06b6d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; letter-spacing: 3px; text-align: center; display: block; margin-bottom: 4px; }
+    .login-tagline { font-size: 0.78rem; color: #60a5fa !important; letter-spacing: 3px; text-transform: uppercase; text-align: center; display: block; margin-bottom: 4px; }
+    .login-divider { height: 3px; background: linear-gradient(90deg,transparent,#1d4ed8,#06b6d4,transparent); border: none; border-radius: 2px; margin: 8px auto 28px auto; width: 55%; }
+    .login-card { background: #0a1020; border: 2px solid #1e3a6b; border-radius: 24px; padding: 32px 30px 26px 30px; box-shadow: 0 12px 40px rgba(29,78,216,0.25); }
+    .login-card-title { font-size: 1.2rem; font-weight: 700; color: #93c5fd; text-align: center; margin: 0 0 6px 0; }
+    .login-card-sub { font-size: 0.78rem; color: #64748b; text-align: center; margin: 0 0 22px 0; }
+    .demo-box { background: linear-gradient(135deg,#0a1020,#0f1729); border: 1px solid #1e3a6b; border-radius: 12px; padding: 12px 16px; margin-top: 16px; font-size: 0.76rem; color: #93c5fd; text-align: center; line-height: 1.8; }
     .features-strip { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin: 22px 0 0 0; }
-    .feature-pill { background: linear-gradient(135deg,#f5f3ff,#ede9fe); border: 1px solid #c4b5fd; border-radius: 20px; padding: 5px 14px; font-size: 0.73rem; color: #7c3aed; font-weight: 500; }
-    .home-bg { background: linear-gradient(135deg,#f8f4ff 0%,#ede9fe 40%,#e0f2fe 100%); border-radius: 24px; padding: 40px 30px 30px 30px; margin-bottom: 20px; text-align: center; }
-    .home-logo { font-family: 'Orbitron', sans-serif !important; font-size: 2.6rem; font-weight: 900; background: linear-gradient(135deg,#7c3aed,#4f46e5,#06b6d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; letter-spacing: 4px; margin-bottom: 6px; }
-    .home-sub { font-size: 0.9rem; color: #7c3aed !important; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 6px; }
-    .home-divider { height: 3px; background: linear-gradient(90deg,transparent,#7c3aed,#4f46e5,#06b6d4,transparent); border-radius: 2px; margin: 10px auto 20px auto; width: 60%; border: none; }
-    .home-tagline { font-size: 1.15rem; color: #4c1d95; font-weight: 600; margin-bottom: 4px; }
-    .home-desc { font-size: 0.85rem; color: #4b5563; margin-bottom: 0; }
-    .stat-num { font-size: 1.5rem; font-weight: 700; color: #7c3aed; display: block; }
-    .stat-label { font-size: 0.72rem; color: #6b7280; text-transform: uppercase; letter-spacing: 1px; }
-    .path-card-purple { background: linear-gradient(145deg,#7c3aed,#4f46e5,#3730a3); border-radius: 24px; padding: 36px 24px 28px 24px; text-align: center; box-shadow: 0 12px 40px rgba(124,58,237,0.35); }
-    .path-card-cyan   { background: linear-gradient(145deg,#0891b2,#0e7490,#155e75); border-radius: 24px; padding: 36px 24px 28px 24px; text-align: center; box-shadow: 0 12px 40px rgba(8,145,178,0.35); }
-    .card-title { font-size: 1.3rem; font-weight: 700; color: #ffffff !important; margin: 0 0 10px 0; }
-    .card-features-purple, .card-features-cyan { color: #ffffff !important; font-size: 0.8rem; line-height: 1.9; }
-    .card-badge { display: inline-block; background: rgba(255,255,255,0.25); border: 1px solid rgba(255,255,255,0.4); border-radius: 20px; padding: 3px 12px; font-size: 0.72rem; color: #ffffff !important; margin: 2px; }
+    .feature-pill { background: linear-gradient(135deg,#0a1020,#0f1729); border: 1px solid #1e3a6b; border-radius: 20px; padding: 5px 14px; font-size: 0.73rem; color: #60a5fa; font-weight: 500; }
+    .home-bg { background: linear-gradient(135deg,#050a15 0%,#0a1020 40%,#070d20 100%); border-radius: 24px; padding: 40px 30px 30px 30px; margin-bottom: 20px; text-align: center; }
+    .home-logo { font-family: 'Orbitron', sans-serif !important; font-size: 2.6rem; font-weight: 900; background: linear-gradient(135deg,#3b82f6,#1d4ed8,#06b6d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; letter-spacing: 4px; margin-bottom: 6px; }
+    .home-sub { font-size: 0.9rem; color: #60a5fa !important; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 6px; }
+    .home-divider { height: 3px; background: linear-gradient(90deg,transparent,#1d4ed8,#3b82f6,#06b6d4,transparent); border-radius: 2px; margin: 10px auto 20px auto; width: 60%; border: none; }
+    .home-tagline { font-size: 1.15rem; color: #93c5fd; font-weight: 600; margin-bottom: 4px; }
+    .home-desc { font-size: 0.85rem; color: #64748b; margin-bottom: 0; }
+    .stat-num { font-size: 1.5rem; font-weight: 700; color: #60a5fa; display: block; }
+    .stat-label { font-size: 0.72rem; color: #64748b; text-transform: uppercase; letter-spacing: 1px; }
+    .path-card-purple { background: linear-gradient(145deg,#1d4ed8,#1e40af,#1e3a8a); border-radius: 24px; padding: 30px 24px 24px 24px; text-align: center; box-shadow: 0 12px 40px rgba(29,78,216,0.45); min-height: 280px; }
+    .path-card-cyan   { background: linear-gradient(145deg,#0891b2,#0e7490,#155e75); border-radius: 24px; padding: 30px 24px 24px 24px; text-align: center; box-shadow: 0 12px 40px rgba(8,145,178,0.45); min-height: 280px; }
+    .card-title { font-size: 1.2rem; font-weight: 700; color: #ffffff !important; margin: 0 0 10px 0; }
+    .card-features-purple, .card-features-cyan { color: #e2e8f0 !important; font-size: 0.78rem; line-height: 1.9; }
+    .card-badge { display: inline-block; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); border-radius: 20px; padding: 3px 12px; font-size: 0.72rem; color: #ffffff !important; margin: 2px; }
+
+    /* ══ HOME EQUAL-SIZE CARDS ══ */
+    .equal-card {
+        border-radius: 20px;
+        padding: 24px 18px 20px 18px;
+        text-align: center;
+        min-height: 260px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: 1px solid rgba(255,255,255,0.12);
+    }
 
     /* ══ MISC ══ */
-    hr { border-color: #ddd6fe !important; }
-    .stCaption { color: #6d28d9 !important; font-size: 0.8rem !important; }
-    .stProgress > div > div { background: linear-gradient(90deg,#7c3aed,#06b6d4) !important; border-radius: 10px !important; }
-    .stDataFrame td, .stDataFrame th { color: #1a1a2e !important; }
+    hr { border-color: #1e3a6b !important; }
+    .stCaption { color: #60a5fa !important; font-size: 0.8rem !important; }
+    .stProgress > div > div { background: linear-gradient(90deg,#1d4ed8,#06b6d4) !important; border-radius: 10px !important; }
+    .stDataFrame td, .stDataFrame th { color: #e2e8f0 !important; }
+    code { background: #0f1729 !important; color: #93c5fd !important; border-radius: 4px; padding: 2px 6px; }
+    pre { background: #070d1a !important; border: 1px solid #1e3a6b !important; border-radius: 10px !important; }
     ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: #f5f3ff; }
-    ::-webkit-scrollbar-thumb { background: #7c3aed; border-radius: 10px; }
+    ::-webkit-scrollbar-track { background: #050a15; }
+    ::-webkit-scrollbar-thumb { background: #1d4ed8; border-radius: 10px; }
+
+    /* ══ YOUTUBE VIDEO LINK BOX ══ */
+    .yt-box { background: linear-gradient(135deg,#1a0a0a,#2d0a0a); border: 2px solid #dc2626; border-radius: 14px; padding: 14px 18px; margin: 12px 0; }
+    .yt-box a { color: #f87171 !important; font-weight: 700; text-decoration: none; }
+    .yt-box a:hover { color: #fca5a5 !important; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -988,53 +1001,1011 @@ CODING_CONTENT = {
         "icon": "🔵", "color": "#2563eb",
         "chapters": {
             "1. Introduction to C": {
-                "theory": "**C** was developed by Dennis Ritchie in 1972.\n\n**Structure:**\n```c\n#include <stdio.h>\nint main() {\n    printf(\"Hello!\");\n    return 0;\n}\n```\n\n**Key Points:**\n- `#include` includes library\n- `main()` is entry point\n- `printf()` prints output\n- Compiled language, very fast",
-                "example": "```c\n#include <stdio.h>\nint main() {\n    printf(\"Hello, MENTORA AI!\\n\");\n    printf(\"Welcome to C Programming\\n\");\n    return 0;\n}\n```\n**Output:**\n```\nHello, MENTORA AI!\nWelcome to C Programming\n```",
+                "theory": """**C** was developed by Dennis Ritchie at Bell Labs in 1972. It is a middle-level, compiled, procedural language.
+
+**Why Learn C?**
+- Foundation of modern languages (C++, Java, Python are influenced by C)
+- Direct memory management — no garbage collector
+- Extremely fast execution — used in OS kernels, drivers, embedded systems
+- Portable — write once, compile on any platform
+
+**Structure of a C Program:**
+```c
+#include <stdio.h>   // Preprocessor directive — includes Standard I/O library
+#include <stdlib.h>  // Standard library
+
+int main() {         // Entry point — execution starts here
+    printf("Hello!");// Function call — prints to stdout
+    return 0;        // Return 0 = success to OS
+}
+```
+
+**Key Concepts:**
+| Concept | Explanation |
+|---------|-------------|
+| `#include` | Inserts library header file |
+| `main()` | Entry point of every C program |
+| `printf()` | Formatted print to console |
+| `return 0` | Signals successful termination |
+| `;` | Statement terminator — mandatory |
+| `{ }` | Block delimiters — group statements |
+
+**Compilation Steps:**
+```
+Source (.c) → Preprocessor → Compiler → Assembler → Linker → Executable
+```
+
+**Format Specifiers:**
+- `%d` → int, `%f` → float, `%c` → char, `%s` → string, `%lf` → double, `%lu` → unsigned long
+
+**Common Errors:**
+- Missing semicolon → Syntax Error
+- Undeclared variable → Compile Error
+- Array out of bounds → Runtime Error
+- Wrong format specifier → Undefined Behavior""",
+
+                "example": """```c
+#include <stdio.h>
+
+int main() {
+    // Basic output
+    printf("Hello, MENTORA AI!\\n");
+    printf("Welcome to C Programming\\n");
+
+    // Variables and output
+    int age = 20;
+    float cgpa = 9.1f;
+    char grade = 'A';
+    printf("Age: %d\\n", age);
+    printf("CGPA: %.2f\\n", cgpa);
+    printf("Grade: %c\\n", grade);
+
+    // Multiple values in one printf
+    printf("Student: age=%d, cgpa=%.1f, grade=%c\\n", age, cgpa, grade);
+    return 0;
+}
+```
+**Output:**
+```
+Hello, MENTORA AI!
+Welcome to C Programming
+Age: 20
+CGPA: 9.10
+Grade: A
+Student: age=20, cgpa=9.1, grade=A
+```
+
+**🧩 Practice Problem 1:** Write a C program that takes your name as input and prints "Hello, [Name]! You are a C programmer."
+
+**🧩 Practice Problem 2:** Print the sum, difference, product, and quotient of two hardcoded integers 25 and 7.
+
+**🧩 Practice Problem 3:** Display the size (in bytes) of int, float, double, and char using `sizeof()` operator.""",
+
+                "youtube_url": "https://www.youtube.com/watch?v=KJgsSFOSQv0",
+                "youtube_label": "▶ C Programming Full Course — freeCodeCamp",
                 "mcq_topic": "C programming basics structure syntax printf"
             },
             "2. Variables & Data Types": {
-                "theory": "**Data Types:**\n- `int` (4 bytes) — integers\n- `float` (4 bytes) — decimals\n- `double` (8 bytes) — precise decimals\n- `char` (1 byte) — single character\n\n**Format Specifiers:**\n- `%d` integer, `%f` float, `%c` char, `%s` string",
-                "example": "```c\n#include <stdio.h>\nint main() {\n    int age = 21;\n    float cgpa = 8.5;\n    char grade = 'A';\n    printf(\"Age: %d\\n\", age);\n    printf(\"CGPA: %.2f\\n\", cgpa);\n    printf(\"Grade: %c\\n\", grade);\n    return 0;\n}\n```",
+                "theory": """**Data Types in C:**
+
+| Type | Size | Range | Format |
+|------|------|-------|--------|
+| `int` | 4 bytes | -2,147,483,648 to 2,147,483,647 | `%d` |
+| `unsigned int` | 4 bytes | 0 to 4,294,967,295 | `%u` |
+| `short` | 2 bytes | -32,768 to 32,767 | `%hd` |
+| `long` | 8 bytes | ±9.2 × 10¹⁸ | `%ld` |
+| `float` | 4 bytes | ~7 decimal digits | `%f` |
+| `double` | 8 bytes | ~15 decimal digits | `%lf` |
+| `char` | 1 byte | ASCII 0–127 | `%c` |
+
+**Variable Declaration Rules:**
+- Must start with letter or underscore
+- No spaces, no special chars (except `_`)
+- Case-sensitive: `Age` ≠ `age`
+- Cannot use keywords: `int`, `float`, `return`...
+
+**Constants:**
+```c
+const float PI = 3.14159;   // Runtime constant
+#define MAX 100              // Compile-time macro constant
+```
+
+**Type Conversion:**
+```c
+int a = 5, b = 2;
+float result = (float)a / b;  // Cast: result = 2.5 (not 2!)
+int x = (int)3.9;             // Truncates: x = 3
+```
+
+**`scanf()` — Reading Input:**
+```c
+int n;
+scanf("%d", &n);  // & = address-of operator — REQUIRED for scanf
+```""",
+
+                "example": """```c
+#include <stdio.h>
+
+int main() {
+    // Variable declarations
+    int age;
+    float cgpa;
+    char branch;
+    char name[50];
+
+    // Input
+    printf("Enter age: "); scanf("%d", &age);
+    printf("Enter CGPA: "); scanf("%f", &cgpa);
+    printf("Enter branch (C/I/E): "); scanf(" %c", &branch);
+
+    // Output
+    printf("\\n--- Student Info ---\\n");
+    printf("Age   : %d years\\n", age);
+    printf("CGPA  : %.2f\\n", cgpa);
+    printf("Branch: %c\\n", branch);
+
+    // Type sizes
+    printf("\\nSize of int: %lu bytes\\n", sizeof(int));
+    printf("Size of float: %lu bytes\\n", sizeof(float));
+    printf("Size of double: %lu bytes\\n", sizeof(double));
+    printf("Size of char: %lu byte\\n", sizeof(char));
+
+    // Type conversion
+    int x = 7, y = 2;
+    printf("\\nInt division 7/2 = %d\\n", x/y);
+    printf("Float division 7/2 = %.1f\\n", (float)x/y);
+    return 0;
+}
+```
+
+**🧩 Practice Problem 1:** Read the radius of a circle and compute area (πr²) and circumference (2πr). Use `const float PI = 3.14159`.
+
+**🧩 Practice Problem 2:** Temperature Converter — read Celsius and convert to Fahrenheit: `F = (C × 9/5) + 32`.
+
+**🧩 Practice Problem 3:** Swap two integers WITHOUT a third variable using arithmetic: `a = a + b; b = a - b; a = a - b;`""",
+
+                "youtube_url": "https://www.youtube.com/watch?v=wKoGImLA2KA",
+                "youtube_label": "▶ C Variables & Data Types — Neso Academy",
                 "mcq_topic": "C variables data types int float char"
             },
             "3. Operators": {
-                "theory": "**Types:** Arithmetic `+ - * / %`, Relational `== != > <`, Logical `&& || !`, Assignment `= += -=`, Increment `++ --`, Bitwise `& | ^`",
-                "example": "```c\n#include <stdio.h>\nint main() {\n    int a=10, b=3;\n    printf(\"Add:%d Sub:%d Mul:%d\\n\", a+b, a-b, a*b);\n    printf(\"Div:%d Mod:%d\\n\", a/b, a%b);\n    a++; printf(\"After a++: %d\\n\", a);\n    return 0;\n}\n```",
+                "theory": """**Types of Operators in C:**
+
+**1. Arithmetic Operators:**
+| Op | Name | Example | Result |
+|----|------|---------|--------|
+| `+` | Add | 10+3 | 13 |
+| `-` | Sub | 10-3 | 7 |
+| `*` | Mul | 10*3 | 30 |
+| `/` | Div | 10/3 | 3 (int) |
+| `%` | Mod | 10%3 | 1 |
+
+**2. Relational Operators:** `==`, `!=`, `>`, `<`, `>=`, `<=` → return 1 (true) or 0 (false)
+
+**3. Logical Operators:** `&&` (AND), `||` (OR), `!` (NOT)
+
+**4. Bitwise Operators:**
+| Op | Name | Example |
+|----|------|---------|
+| `&` | AND | 5 & 3 = 1 |
+| `\|` | OR | 5 \| 3 = 7 |
+| `^` | XOR | 5 ^ 3 = 6 |
+| `~` | NOT | ~5 = -6 |
+| `<<` | Left Shift | 5<<1 = 10 |
+| `>>` | Right Shift | 5>>1 = 2 |
+
+**5. Assignment:** `=`, `+=`, `-=`, `*=`, `/=`, `%=`
+
+**6. Increment/Decrement:** `++a` (pre), `a++` (post), `--a`, `a--`
+
+**7. Ternary:** `condition ? true_val : false_val`
+
+**8. sizeof:** `sizeof(int)` → 4
+
+**Operator Precedence (High→Low):** `()` → `++ --` → `* / %` → `+ -` → `<< >>` → `== !=` → `& ^ |` → `&& ||` → `?:` → `=`""",
+
+                "example": """```c
+#include <stdio.h>
+
+int main() {
+    int a = 10, b = 3;
+    printf("Arithmetic:\\n");
+    printf("  %d+%d=%d  %d-%d=%d  %d*%d=%d\\n", a,b,a+b, a,b,a-b, a,b,a*b);
+    printf("  %d/%d=%d  %d%%3=%d\\n", a,b,a/b, a,a%b);
+
+    printf("\\nRelational:\\n");
+    printf("  10>3: %d  10==10: %d  10!=3: %d\\n", a>b, a==10, a!=b);
+
+    printf("\\nLogical:\\n");
+    printf("  (10>3)&&(3<5): %d\\n", (a>b)&&(b<5));
+    printf("  (10<3)||(3<5): %d\\n", (a<b)||(b<5));
+
+    printf("\\nBitwise (5 & 3):%d  (5|3):%d  (5^3):%d\\n",5&3, 5|3, 5^3);
+    printf("5<<1=%d (multiply by 2)  5>>1=%d (divide by 2)\\n",5<<1, 5>>1);
+
+    int x = 7;
+    printf("\\nPre-increment: %d\\n", ++x);  // x=8, prints 8
+    printf("Post-increment: %d\\n", x++);   // prints 8, then x=9
+    printf("After: x=%d\\n", x);            // 9
+
+    int age = 20;
+    printf("\\nTernary: %s\\n", age>=18 ? "Adult" : "Minor");
+    return 0;
+}
+```
+
+**🧩 Practice Problem 1:** Write a program using bitwise operators to check if a number is even or odd (`n & 1 == 0` means even).
+
+**🧩 Practice Problem 2:** Check if a year is a leap year using logical operators: `(year%4==0 && year%100!=0) || (year%400==0)`.
+
+**🧩 Practice Problem 3:** Given two integers, find the larger without using `if` — use the ternary operator.""",
+
+                "youtube_url": "https://www.youtube.com/watch?v=Zf9WGDYmFjg",
+                "youtube_label": "▶ C Operators Explained — Neso Academy",
                 "mcq_topic": "C operators arithmetic relational logical"
             },
             "4. Control Flow": {
-                "theory": "**if-else:**\n```c\nif(x>0) printf(\"Positive\");\nelse if(x<0) printf(\"Negative\");\nelse printf(\"Zero\");\n```\n**switch:**\n```c\nswitch(n){case 1: ...; break; default: ...;}\n```\n**Ternary:** `result = (a>b) ? a : b;`",
-                "example": "```c\n#include <stdio.h>\nint main() {\n    int m=75;\n    if(m>=90) printf(\"Grade O\\n\");\n    else if(m>=80) printf(\"Grade A+\\n\");\n    else if(m>=70) printf(\"Grade A\\n\");\n    else printf(\"Below A\\n\");\n    printf(\"%s\\n\", m>=40?\"PASS\":\"FAIL\");\n    return 0;\n}\n```",
+                "theory": """**Decision Making in C:**
+
+**if-else if-else:**
+```c
+if (marks >= 90)      printf("Grade O");
+else if (marks >= 80) printf("Grade A+");
+else if (marks >= 70) printf("Grade A");
+else if (marks >= 60) printf("Grade B+");
+else                  printf("Fail");
+```
+
+**switch-case:**
+- Works only with integer / char types
+- Each case must end with `break` (else falls through)
+- `default` handles unmatched values
+```c
+switch(day) {
+    case 1: printf("Monday"); break;
+    case 2: printf("Tuesday"); break;
+    default: printf("Other"); break;
+}
+```
+
+**Ternary Operator (short if-else):**
+```c
+int max = (a > b) ? a : b;
+printf("%s", age>=18 ? "Eligible" : "Not Eligible");
+```
+
+**goto (avoid in modern code):**
+```c
+if (error) goto cleanup;
+// ... code ...
+cleanup:
+    free(ptr);
+```
+
+**Key Differences:**
+| Feature | if-else | switch |
+|---------|---------|--------|
+| Condition | Any boolean | Integer/char only |
+| Range checks | ✅ Yes | ❌ No |
+| Speed | O(n) | O(1) with jump table |
+| Fall-through | No | Yes (without break) |""",
+
+                "example": """```c
+#include <stdio.h>
+
+int main() {
+    int marks = 75;
+
+    // Grade using if-else
+    printf("Grade System:\\n");
+    if (marks >= 90)      printf("  Grade O (Outstanding)\\n");
+    else if (marks >= 80) printf("  Grade A+ (Excellent)\\n");
+    else if (marks >= 70) printf("  Grade A (Very Good)\\n");
+    else if (marks >= 60) printf("  Grade B+ (Good)\\n");
+    else if (marks >= 40) printf("  Grade Pass\\n");
+    else                  printf("  FAIL\\n");
+
+    // Pass/Fail with ternary
+    printf("  Result: %s\\n", marks >= 40 ? "PASS" : "FAIL");
+
+    // Switch on day number
+    int day = 3;
+    printf("\\nDay %d is: ", day);
+    switch(day) {
+        case 1: printf("Monday\\n"); break;
+        case 2: printf("Tuesday\\n"); break;
+        case 3: printf("Wednesday\\n"); break;
+        case 4: printf("Thursday\\n"); break;
+        case 5: printf("Friday\\n"); break;
+        default: printf("Weekend\\n"); break;
+    }
+
+    // Calculator using switch
+    float a = 10, b = 3;
+    char op = '+';
+    printf("\\nCalculator: %.0f %c %.0f = ", a, op, b);
+    switch(op) {
+        case '+': printf("%.2f\\n", a+b); break;
+        case '-': printf("%.2f\\n", a-b); break;
+        case '*': printf("%.2f\\n", a*b); break;
+        case '/': b!=0 ? printf("%.2f\\n",a/b) : printf("Error\\n"); break;
+    }
+    return 0;
+}
+```
+
+**🧩 Practice Problem 1:** Write a program to find the largest of three numbers using if-else.
+
+**🧩 Practice Problem 2:** Build a simple ATM menu with switch: 1-Balance, 2-Withdraw, 3-Deposit, 4-Exit.
+
+**🧩 Practice Problem 3:** Given a number 1-12, print the corresponding month name and number of days using switch.""",
+
+                "youtube_url": "https://www.youtube.com/watch?v=okfNPGFaBkU",
+                "youtube_label": "▶ C Control Flow (if, switch) — Neso Academy",
                 "mcq_topic": "C if else switch control flow"
             },
             "5. Loops": {
-                "theory": "**for:** `for(i=0; i<n; i++)`\n**while:** `while(condition){}`\n**do-while:** `do{} while(condition);`\n**break** — exit loop, **continue** — skip iteration",
-                "example": "```c\n#include <stdio.h>\nint main() {\n    for(int i=1;i<=5;i++) printf(\"%d \",i);\n    printf(\"\\n\");\n    int sum=0,n=1;\n    while(n<=10){ sum+=n; n++; }\n    printf(\"Sum 1-10: %d\\n\", sum);\n    return 0;\n}\n```",
+                "theory": """**Types of Loops in C:**
+
+**for loop** — use when count is known:
+```c
+for (init; condition; update) { body; }
+// for(i=0; i<n; i++) — most common pattern
+```
+
+**while loop** — use when count is unknown:
+```c
+while (condition) { body; update; }
+```
+
+**do-while loop** — execute at least once:
+```c
+do { body; } while (condition);
+// Menu-driven programs always use do-while
+```
+
+**Loop Control Statements:**
+| Statement | Effect |
+|-----------|--------|
+| `break` | Exit loop immediately |
+| `continue` | Skip current iteration |
+| `goto` | Jump to label (avoid) |
+
+**Nested Loops:**
+```c
+for (int i=1; i<=3; i++) {
+    for (int j=1; j<=3; j++) {
+        printf("%d ", i*j);
+    }
+    printf("\\n");
+}
+```
+
+**Infinite Loop:**
+```c
+while(1) { ... }    // Exit with break
+for(;;) { ... }     // Same
+```
+
+**Common Patterns:**
+- Sum of N numbers: `for(i=1;i<=n;i++) sum+=i;` → sum = n*(n+1)/2
+- Factorial: `for(i=1;i<=n;i++) fact*=i;`
+- Reverse a number: `while(n>0){ r=r*10+n%10; n/=10; }`
+- Count digits: `while(n>0){ count++; n/=10; }`""",
+
+                "example": """```c
+#include <stdio.h>
+
+int main() {
+    // Sum 1 to N
+    int n = 10, sum = 0;
+    for (int i = 1; i <= n; i++) sum += i;
+    printf("Sum 1 to %d = %d\\n", n, sum);  // 55
+
+    // Multiplication table
+    printf("\\nTable of 5:\\n");
+    for (int i = 1; i <= 10; i++)
+        printf("5 x %2d = %d\\n", i, 5*i);
+
+    // Fibonacci using while
+    printf("\\nFibonacci (first 10):\\n");
+    int a=0, b=1, count=0;
+    while (count < 10) {
+        printf("%d ", a);
+        int temp = a + b;
+        a = b; b = temp;
+        count++;
+    }
+    printf("\\n");
+
+    // Reverse a number using do-while
+    int num = 12345, rev = 0;
+    do {
+        rev = rev * 10 + num % 10;
+        num /= 10;
+    } while (num > 0);
+    printf("\\nReversed: %d\\n", rev);  // 54321
+
+    // Star pattern using nested loops
+    printf("\\nStar Pattern:\\n");
+    for (int i = 1; i <= 5; i++) {
+        for (int j = 1; j <= i; j++) printf("* ");
+        printf("\\n");
+    }
+    return 0;
+}
+```
+
+**🧩 Practice Problem 1:** Print all prime numbers between 1 and 100 using nested loops.
+
+**🧩 Practice Problem 2:** Find the GCD of two numbers using Euclid's algorithm with a while loop: `while(b != 0){ t=b; b=a%b; a=t; }`.
+
+**🧩 Practice Problem 3:** Print a diamond star pattern using nested for loops.""",
+
+                "youtube_url": "https://www.youtube.com/watch?v=cRCOE7vH_WQ",
+                "youtube_label": "▶ C Loops (for, while, do-while) — Neso Academy",
                 "mcq_topic": "C for while do-while loops"
             },
             "6. Arrays": {
-                "theory": "```c\nint arr[5] = {10,20,30,40,50};\nint matrix[3][3] = {{1,2,3},{4,5,6},{7,8,9}};\n```\n- Index starts at 0\n- Stored in contiguous memory\n- `arr[i]` — access element i",
-                "example": "```c\n#include <stdio.h>\nint main() {\n    int arr[]={5,3,8,1,9};\n    int n=5, max=arr[0], sum=0;\n    for(int i=0;i<n;i++){\n        sum+=arr[i];\n        if(arr[i]>max) max=arr[i];\n    }\n    printf(\"Max:%d Sum:%d\\n\",max,sum);\n    return 0;\n}\n```",
+                "theory": """**Arrays** — collection of elements of **same type** stored in **contiguous memory**.
+
+```c
+int arr[5];                        // Declaration
+int arr[5] = {10,20,30,40,50};    // Initialization
+int arr[] = {1,2,3};              // Size auto-calculated (3)
+arr[0] = 100;                     // Access (0-indexed)
+```
+
+**2D Arrays (Matrix):**
+```c
+int matrix[3][4];             // 3 rows, 4 cols
+int mat[2][3] = {{1,2,3},{4,5,6}};
+printf("%d", mat[1][2]);      // Row 1, Col 2 → 6
+// Total elements: rows × cols = 2 × 3 = 6
+```
+
+**Memory Layout:**
+- 1D: `arr[i]` is at address `base + i * sizeof(type)`
+- 2D: `mat[i][j]` is at `base + (i*cols + j) * sizeof(type)`
+
+**Key Operations:**
+- **Linear Search** O(n) — scan each element
+- **Binary Search** O(log n) — sorted array, divide & conquer
+- **Bubble Sort** O(n²) — swap adjacent elements
+- **Finding Max/Min** O(n)
+
+**Strings as char arrays:**
+```c
+char name[20] = "MENTORA";  // Last element is '\\0' (null)
+char c[4] = {'A','B','C','\\0'};
+```
+
+**Passing Array to Function:**
+```c
+void func(int arr[], int n) { ... }  // Array decays to pointer
+```""",
+
+                "example": """```c
+#include <stdio.h>
+
+// Bubble sort
+void bubbleSort(int arr[], int n) {
+    for (int i = 0; i < n-1; i++)
+        for (int j = 0; j < n-i-1; j++)
+            if (arr[j] > arr[j+1]) {
+                int t = arr[j]; arr[j] = arr[j+1]; arr[j+1] = t;
+            }
+}
+
+// Binary search (array must be sorted)
+int binarySearch(int arr[], int n, int key) {
+    int l=0, h=n-1;
+    while (l <= h) {
+        int m = (l+h)/2;
+        if (arr[m] == key) return m;
+        else if (arr[m] < key) l = m+1;
+        else h = m-1;
+    }
+    return -1;
+}
+
+int main() {
+    int arr[] = {64, 34, 25, 12, 22, 11, 90};
+    int n = 7;
+
+    // Find max, min, sum before sort
+    int max=arr[0], min=arr[0], sum=0;
+    for (int i=0; i<n; i++) {
+        if (arr[i]>max) max=arr[i];
+        if (arr[i]<min) min=arr[i];
+        sum += arr[i];
+    }
+    printf("Max:%d  Min:%d  Sum:%d  Avg:%.2f\\n", max, min, sum, (float)sum/n);
+
+    bubbleSort(arr, n);
+    printf("Sorted: ");
+    for (int i=0; i<n; i++) printf("%d ", arr[i]);
+
+    int idx = binarySearch(arr, n, 25);
+    printf("\\nSearch 25: index %d\\n", idx);
+
+    // 2D matrix multiplication
+    int A[2][2]={{1,2},{3,4}}, B[2][2]={{5,6},{7,8}}, C[2][2]={{0}};
+    for (int i=0;i<2;i++)
+        for (int j=0;j<2;j++)
+            for (int k=0;k<2;k++)
+                C[i][j] += A[i][k]*B[k][j];
+    printf("\\nMatrix product C[0][0]=%d C[1][1]=%d\\n",C[0][0],C[1][1]);
+    return 0;
+}
+```
+
+**🧩 Practice Problem 1:** Find the second largest element in an array without sorting.
+
+**🧩 Practice Problem 2:** Count the frequency of each element in an array using a frequency array.
+
+**🧩 Practice Problem 3:** Implement Insertion Sort and verify on array `{5,1,4,2,8}`.""",
+
+                "youtube_url": "https://www.youtube.com/watch?v=55l-aZ7_name",
+                "youtube_label": "▶ C Arrays Complete Tutorial — Neso Academy",
                 "mcq_topic": "C arrays 1D 2D indexing"
             },
             "7. Functions": {
-                "theory": "```c\nreturn_type name(params) {\n    return value;\n}\n```\n**Call by Value** — copy passed, original unchanged\n**Call by Reference** — pointer passed, original changes\n**Recursive** — function calls itself",
-                "example": "```c\n#include <stdio.h>\nint factorial(int n){\n    if(n<=1) return 1;\n    return n*factorial(n-1);\n}\nvoid swap(int *a,int *b){\n    int t=*a; *a=*b; *b=t;\n}\nint main(){\n    printf(\"5!=%d\\n\",factorial(5));\n    int x=10,y=20; swap(&x,&y);\n    printf(\"x=%d y=%d\\n\",x,y);\n}\n```",
+                "theory": """**Functions** — reusable blocks of code that perform a specific task.
+
+```c
+return_type function_name(parameter_list) {
+    // body
+    return value;
+}
+```
+
+**Types of Functions:**
+| Type | Return | Parameters | Example |
+|------|--------|-----------|---------|
+| No return, No param | void | none | `void display()` |
+| With return, No param | int | none | `int getAge()` |
+| No return, With param | void | yes | `void print(int n)` |
+| With return, With param | int | yes | `int add(int a,int b)` |
+
+**Call by Value vs Call by Reference:**
+```c
+// Call by Value — copy passed, original unchanged
+void addTen(int x) { x += 10; }  // original not changed
+
+// Call by Reference — pointer passed, original changes
+void addTen(int *x) { *x += 10; }  // changes original
+addTen(&n);  // pass address
+```
+
+**Recursion** — function calling itself:
+```c
+int factorial(int n) {
+    if (n <= 1) return 1;           // Base case
+    return n * factorial(n - 1);    // Recursive case
+}
+// factorial(5) = 5*4*3*2*1 = 120
+```
+
+**Function Prototype** — declare before `main()`:
+```c
+int add(int, int);  // forward declaration
+int main() { ... }
+int add(int a, int b) { return a+b; }
+```
+
+**Recursion vs Iteration:**
+- Recursion: cleaner code, but uses call stack memory
+- Iteration: faster, no stack overflow risk
+- Every recursive solution has an iterative equivalent""",
+
+                "example": """```c
+#include <stdio.h>
+
+// Function prototype
+int factorial(int n);
+int fibonacci(int n);
+int isPrime(int n);
+void swap(int *a, int *b);
+
+int factorial(int n) {
+    if (n <= 1) return 1;
+    return n * factorial(n-1);
+}
+
+int fibonacci(int n) {
+    if (n <= 1) return n;
+    return fibonacci(n-1) + fibonacci(n-2);
+}
+
+int isPrime(int n) {
+    if (n < 2) return 0;
+    for (int i=2; i*i<=n; i++)
+        if (n%i == 0) return 0;
+    return 1;
+}
+
+void swap(int *a, int *b) {
+    int temp = *a; *a = *b; *b = temp;
+}
+
+int main() {
+    // Factorial
+    for (int i=1; i<=7; i++)
+        printf("%d! = %d\\n", i, factorial(i));
+
+    // Fibonacci
+    printf("\\nFibonacci: ");
+    for (int i=0; i<10; i++) printf("%d ", fibonacci(i));
+    printf("\\n");
+
+    // Prime numbers up to 30
+    printf("\\nPrimes up to 30: ");
+    for (int i=2; i<=30; i++)
+        if (isPrime(i)) printf("%d ", i);
+    printf("\\n");
+
+    // Call by reference swap
+    int x=100, y=200;
+    printf("\\nBefore swap: x=%d, y=%d\\n", x, y);
+    swap(&x, &y);
+    printf("After swap: x=%d, y=%d\\n", x, y);
+    return 0;
+}
+```
+
+**🧩 Practice Problem 1:** Write a recursive function to compute the power of a number: `power(base, exp)`.
+
+**🧩 Practice Problem 2:** Implement a function `int gcd(int a, int b)` using recursion (Euclid's algorithm).
+
+**🧩 Practice Problem 3:** Write a function that checks if a number is a palindrome (reads same forwards and backwards).""",
+
+                "youtube_url": "https://www.youtube.com/watch?v=wTHF1i7qSuY",
+                "youtube_label": "▶ C Functions & Recursion — Neso Academy",
                 "mcq_topic": "C functions recursion call by value reference"
             },
             "8. Pointers": {
-                "theory": "**Pointer** stores memory address.\n```c\nint *ptr = &var;  // store address\n*ptr              // dereference\nptr++             // pointer arithmetic\n```\n`&` — address-of, `*` — dereference\n`NULL` pointer — safe initialisation",
-                "example": "```c\n#include <stdio.h>\nint main(){\n    int num=42;\n    int *ptr=&num;\n    printf(\"Value: %d\\n\",*ptr);\n    *ptr=100;\n    printf(\"Changed: %d\\n\",num);\n    int arr[]={10,20,30};\n    int *p=arr;\n    for(int i=0;i<3;i++) printf(\"%d \",*(p+i));\n    return 0;\n}\n```",
+                "theory": """**Pointer** — a variable that stores the **memory address** of another variable.
+
+```c
+int num = 42;
+int *ptr = &num;   // ptr holds address of num
+printf("%d", *ptr); // dereference: print value at address = 42
+*ptr = 100;         // changes num to 100
+```
+
+**Key Operators:**
+- `&` — address-of operator: `&num` → address of num
+- `*` — dereference operator: `*ptr` → value at address
+
+**Pointer Arithmetic:**
+```c
+int arr[5] = {10,20,30,40,50};
+int *p = arr;       // p points to arr[0]
+p++;                // p now points to arr[1]
+printf("%d", *(p+2)); // arr[3] = 40
+```
+
+**Types of Pointers:**
+| Type | Description |
+|------|-------------|
+| `int *p` | Pointer to int |
+| `int **pp` | Pointer to pointer |
+| `void *vp` | Generic pointer |
+| `int *p = NULL` | Null pointer (safe init) |
+| `const int *p` | Pointer to constant |
+
+**Pointer vs Array:**
+```c
+int arr[3] = {1,2,3};
+int *p = arr;
+// arr[i] == *(arr+i) == *(p+i) == p[i]  — all equivalent!
+```
+
+**Dynamic Memory Allocation:**
+```c
+int *arr = (int*)malloc(n * sizeof(int));  // allocate
+if (arr == NULL) { printf("Error"); exit(1); }
+arr[0] = 10;  // use like normal array
+free(arr);    // MUST free to avoid memory leak
+```
+
+**Common Mistakes:**
+- Dangling pointer: pointing to freed memory
+- Wild pointer: uninitialized pointer
+- Memory leak: forgetting to call `free()`""",
+
+                "example": """```c
+#include <stdio.h>
+#include <stdlib.h>
+
+void printArray(int *arr, int n) {
+    for (int i=0; i<n; i++) printf("%d ", *(arr+i));
+    printf("\\n");
+}
+
+int main() {
+    // Basic pointer
+    int num = 42;
+    int *ptr = &num;
+    printf("Value: %d, Address: %p\\n", *ptr, (void*)ptr);
+    *ptr = 100;
+    printf("Modified: %d\\n", num);
+
+    // Pointer arithmetic with arrays
+    int arr[] = {10, 20, 30, 40, 50};
+    int *p = arr;
+    printf("\\nArray via pointer: ");
+    for (int i=0; i<5; i++) printf("%d ", *(p+i));
+    printf("\\n");
+
+    // Double pointer
+    int x = 5;
+    int *px = &x;
+    int **ppx = &px;
+    printf("\\nDouble pointer: **ppx = %d\\n", **ppx);
+
+    // Dynamic memory allocation
+    int n = 5;
+    int *dynArr = (int*)malloc(n * sizeof(int));
+    if (!dynArr) { printf("Malloc failed!\\n"); return 1; }
+    for (int i=0; i<n; i++) dynArr[i] = (i+1) * 10;
+    printf("\\nDynamic array: "); printArray(dynArr, n);
+    free(dynArr);  // always free!
+
+    // Pointer to pointer
+    char *str = "MENTORA";
+    printf("\\nString via pointer: %s (len=", str);
+    char *s = str;
+    int len = 0;
+    while (*s++) len++;
+    printf("%d)\\n", len);
+    return 0;
+}
+```
+
+**🧩 Practice Problem 1:** Write a function `void reverseArray(int *arr, int n)` using pointers to reverse an array in-place.
+
+**🧩 Practice Problem 2:** Dynamically allocate an array of n integers, fill with squares, then free.
+
+**🧩 Practice Problem 3:** Implement `int strLen(char *s)` — find string length using pointer arithmetic (without `strlen`).""",
+
+                "youtube_url": "https://www.youtube.com/watch?v=zuegQmMdy8M",
+                "youtube_label": "▶ C Pointers Complete — freeCodeCamp",
                 "mcq_topic": "C pointers address dereference pointer arithmetic"
             },
             "9. Strings": {
-                "theory": "Strings are char arrays ending with `\\0`\n```c\nchar s[] = \"MENTORA\";\n```\n**Functions:** `strlen`, `strcpy`, `strcat`, `strcmp`, `strupr`, `strlwr`",
-                "example": "```c\n#include <stdio.h>\n#include <string.h>\nint main(){\n    char s1[]=\"MENTORA\",s2[]=\" AI\",s3[20];\n    printf(\"Len:%lu\\n\",strlen(s1));\n    strcpy(s3,s1); strcat(s3,s2);\n    printf(\"%s\\n\",s3);\n    printf(\"Equal:%d\\n\",strcmp(s1,s1));\n    return 0;\n}\n```",
+                "theory": """**Strings** in C are **null-terminated character arrays**.
+
+```c
+char s1[] = "MENTORA";       // s1[7] = '\\0' auto-added
+char s2[20] = "Hello";       // 20 chars allocated
+char s3[] = {'H','i','\\0'}; // manual null terminator
+```
+
+**Important String Functions (`<string.h>`):**
+| Function | Purpose | Example |
+|----------|---------|---------|
+| `strlen(s)` | Length (excl \\0) | `strlen("Hi")=2` |
+| `strcpy(d,s)` | Copy s to d | `strcpy(dest, src)` |
+| `strncpy(d,s,n)` | Copy n chars (safe) | - |
+| `strcat(d,s)` | Append s to d | - |
+| `strcmp(s1,s2)` | Compare: 0=equal | - |
+| `strchr(s,c)` | Find char | returns pointer or NULL |
+| `strstr(s,sub)` | Find substring | - |
+| `strtok(s,delim)` | Tokenize | - |
+| `toupper/tolower` | Case change | needs `<ctype.h>` |
+
+**Character Classification (`<ctype.h>`):**
+```c
+isalpha(c)   // is letter?
+isdigit(c)   // is digit?
+isspace(c)   // is whitespace?
+isupper(c)   // is uppercase?
+toupper(c)   // convert to uppercase
+```
+
+**Reading Strings:**
+```c
+scanf("%s", name);          // stops at whitespace
+fgets(name, 50, stdin);    // reads full line (safer!)
+gets(name);                // UNSAFE — never use!
+```
+
+**String Manipulation Pattern:**
+```c
+// Count vowels
+int count = 0;
+for (int i=0; s[i]; i++)
+    if (strchr("aeiouAEIOU", s[i])) count++;
+```""",
+
+                "example": """```c
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+// Check palindrome
+int isPalindrome(char *s) {
+    int l=0, r=strlen(s)-1;
+    while (l < r) {
+        if (tolower(s[l]) != tolower(s[r])) return 0;
+        l++; r--;
+    }
+    return 1;
+}
+
+// Count vowels
+int countVowels(char *s) {
+    int cnt = 0;
+    for (int i=0; s[i]; i++)
+        if (strchr("aeiouAEIOU", s[i])) cnt++;
+    return cnt;
+}
+
+int main() {
+    char s1[] = "MENTORA";
+    char s2[] = " AI";
+    char s3[50];
+
+    // String functions
+    printf("Length: %lu\\n", strlen(s1));
+    printf("Uppercase: ");
+    for (int i=0; s1[i]; i++) printf("%c", toupper(s1[i]));
+    printf("\\n");
+
+    strcpy(s3, s1);
+    strcat(s3, s2);
+    printf("Concatenated: %s\\n", s3);
+    printf("Compare: %d\\n", strcmp(s1, "MENTORA")); // 0=equal
+
+    // Palindrome check
+    char words[][20] = {"racecar", "hello", "madam", "world"};
+    for (int i=0; i<4; i++)
+        printf("%s → %s\\n", words[i], isPalindrome(words[i]) ? "Palindrome" : "Not palindrome");
+
+    // Vowel count
+    char sentence[] = "Engineering is awesome";
+    printf("\\nVowels in '%s': %d\\n", sentence, countVowels(sentence));
+
+    // Tokenize
+    char csv[] = "Data,Structures,DBMS,OS,Networks";
+    printf("\\nSubjects: ");
+    char *token = strtok(csv, ",");
+    while (token) { printf("[%s] ", token); token = strtok(NULL, ","); }
+    printf("\\n");
+    return 0;
+}
+```
+
+**🧩 Practice Problem 1:** Write a function to count the number of words in a string (separated by spaces).
+
+**🧩 Practice Problem 2:** Remove all duplicate characters from a string — keep only first occurrence.
+
+**🧩 Practice Problem 3:** Implement `char* myStrrev(char *s)` to reverse a string in-place without using any library function.""",
+
+                "youtube_url": "https://www.youtube.com/watch?v=Bf8a6IC1dE8",
+                "youtube_label": "▶ C Strings Complete Tutorial — Neso Academy",
                 "mcq_topic": "C strings strlen strcpy strcat strcmp"
             },
             "10. Structures & File I/O": {
-                "theory": "```c\nstruct Student{ int roll; char name[50]; float cgpa; };\nstruct Student s = {101, \"Alex\", 8.5};\n```\n**File:** `fopen`, `fprintf`, `fscanf`, `fclose`\nModes: `\"r\"` read, `\"w\"` write, `\"a\"` append",
-                "example": "```c\n#include <stdio.h>\nstruct Student{int roll;char name[50];float cgpa;};\nint main(){\n    struct Student s={101,\"Aryan\",9.1};\n    printf(\"%d %s %.1f\\n\",s.roll,s.name,s.cgpa);\n    FILE *fp=fopen(\"out.txt\",\"w\");\n    fprintf(fp,\"%s %.1f\",s.name,s.cgpa);\n    fclose(fp);\n    printf(\"Saved!\\n\");\n}\n```",
+                "theory": """**Structures (`struct`)** — user-defined data type grouping related variables.
+
+```c
+struct Student {
+    int roll;
+    char name[50];
+    float cgpa;
+    char branch[30];
+};
+
+// Declare and initialize
+struct Student s1 = {101, "Aryan", 9.1, "CS"};
+struct Student s2;
+s2.roll = 102;              // dot operator
+strcpy(s2.name, "Sara");
+
+// Pointer to struct
+struct Student *ptr = &s1;
+printf("%s", ptr->name);   // arrow operator (->)
+```
+
+**`typedef` for convenience:**
+```c
+typedef struct { int x; int y; } Point;
+Point p = {3, 4};  // no need for 'struct' keyword
+```
+
+**Nested Structures:**
+```c
+struct Date { int day, month, year; };
+struct Employee { char name[50]; struct Date dob; int salary; };
+```
+
+**File I/O Functions:**
+| Function | Purpose |
+|----------|---------|
+| `fopen(name, mode)` | Open file, returns FILE* |
+| `fprintf(fp, fmt, ...)` | Write formatted |
+| `fscanf(fp, fmt, ...)` | Read formatted |
+| `fgets(buf, n, fp)` | Read line |
+| `fputs(s, fp)` | Write line |
+| `fclose(fp)` | Close file |
+| `feof(fp)` | Check end of file |
+
+**File Modes:** `"r"` read, `"w"` write (overwrites), `"a"` append, `"r+"` read+write, `"rb"` binary read
+
+**Binary File I/O:**
+```c
+fwrite(&s, sizeof(struct Student), 1, fp);  // write struct
+fread(&s, sizeof(struct Student), 1, fp);   // read struct
+```""",
+
+                "example": """```c
+#include <stdio.h>
+#include <string.h>
+
+typedef struct {
+    int roll;
+    char name[50];
+    float cgpa;
+    char branch[10];
+} Student;
+
+void printStudent(Student s) {
+    printf("Roll:%d | %-15s | CGPA:%.2f | %s\\n",
+           s.roll, s.name, s.cgpa, s.branch);
+}
+
+int main() {
+    Student students[] = {
+        {101, "Aryan", 9.1f, "CS"},
+        {102, "Sara",  8.5f, "EC"},
+        {103, "Raj",   7.8f, "ME"},
+        {104, "Priya", 9.5f, "CS"},
+    };
+    int n = 4;
+
+    // Print all
+    printf("--- Student Records ---\\n");
+    for (int i=0; i<n; i++) printStudent(students[i]);
+
+    // Find topper
+    Student *topper = &students[0];
+    for (int i=1; i<n; i++)
+        if (students[i].cgpa > topper->cgpa) topper = &students[i];
+    printf("\\nTopper: %s (%.2f)\\n", topper->name, topper->cgpa);
+
+    // Write to file
+    FILE *fp = fopen("students.txt", "w");
+    if (!fp) { printf("File error!\\n"); return 1; }
+    fprintf(fp, "Roll,Name,CGPA,Branch\\n");
+    for (int i=0; i<n; i++)
+        fprintf(fp, "%d,%s,%.2f,%s\\n",
+                students[i].roll, students[i].name,
+                students[i].cgpa, students[i].branch);
+    fclose(fp);
+    printf("\\nData saved to students.txt\\n");
+
+    // Read from file
+    fp = fopen("students.txt", "r");
+    printf("\\nFile contents:\\n");
+    char line[100];
+    while (fgets(line, sizeof(line), fp))
+        printf("  %s", line);
+    fclose(fp);
+    return 0;
+}
+```
+
+**🧩 Practice Problem 1:** Create a `struct Complex` with real and imaginary parts; write functions to add, subtract, and multiply two complex numbers.
+
+**🧩 Practice Problem 2:** Build a student database that lets the user add, display, and search records stored in a binary file.
+
+**🧩 Practice Problem 3:** Implement a simple inventory management system using a struct with name, quantity, price — store/retrieve from file.""",
+
+                "youtube_url": "https://www.youtube.com/watch?v=ky7E3CuCyHE",
+                "youtube_label": "▶ C Structures & File I/O — Neso Academy",
                 "mcq_topic": "C structures file handling fopen fclose"
             },
         }
@@ -1045,42 +2016,58 @@ CODING_CONTENT = {
             "1. OOP Concepts": {
                 "theory": "**4 Pillars:** Encapsulation, Inheritance, Polymorphism, Abstraction\n\n```cpp\nclass Student{\nprivate:\n    string name; float cgpa;\npublic:\n    Student(string n,float c):name(n),cgpa(c){}\n    void display(){ cout<<name<<\" \"<<cgpa; }\n};\n```",
                 "example": "```cpp\n#include<iostream>\nusing namespace std;\nclass Rectangle{\n    float l,w;\npublic:\n    Rectangle(float a,float b):l(a),w(b){}\n    float area(){return l*w;}\n    float peri(){return 2*(l+w);}\n};\nint main(){\n    Rectangle r(10,4);\n    cout<<\"Area:\"<<r.area()<<\" Peri:\"<<r.peri();\n}\n```",
-                "mcq_topic": "C++ OOP classes objects encapsulation"
+                "mcq_topic": "C++ OOP classes objects encapsulation",
+                "youtube_url": "https://www.youtube.com/watch?v=wN0x9eZLix4",
+                "youtube_label": "▶ C++ OOP Complete — freeCodeCamp",
             },
             "2. Inheritance": {
                 "theory": "**Types:** Single, Multiple, Multilevel, Hierarchical\n```cpp\nclass Animal{ public: void eat(){} };\nclass Dog:public Animal{ public: void bark(){} };\n```\nAccess: `public`, `private`, `protected`",
                 "example": "```cpp\n#include<iostream>\nusing namespace std;\nclass Shape{ public: string color; Shape(string c):color(c){} };\nclass Circle:public Shape{\n    float r;\npublic:\n    Circle(string c,float r):Shape(c),r(r){}\n    void show(){ cout<<color<<\" circle area:\"<<3.14*r*r; }\n};\nint main(){ Circle c(\"Red\",5); c.show(); }\n```",
-                "mcq_topic": "C++ inheritance types single multiple"
+                "mcq_topic": "C++ inheritance types single multiple",
+                "youtube_url": "https://www.youtube.com/watch?v=X8nYM8wdNRE",
+                "youtube_label": "▶ C++ Inheritance — The Cherno",
             },
             "3. Polymorphism": {
                 "theory": "**Compile-time:** Function overloading, Operator overloading\n**Runtime:** Virtual functions, Function overriding\n```cpp\nvirtual void show()=0;  // pure virtual\n```",
                 "example": "```cpp\n#include<iostream>\nusing namespace std;\nclass Animal{public: virtual void sound(){cout<<\"...\\n\";}};\nclass Dog:public Animal{public: void sound() override{cout<<\"Woof!\\n\";}};\nclass Cat:public Animal{public: void sound() override{cout<<\"Meow!\\n\";}};\nint main(){\n    Animal *a;\n    Dog d; Cat c;\n    a=&d; a->sound();\n    a=&c; a->sound();\n}\n```",
-                "mcq_topic": "C++ polymorphism virtual override"
+                "mcq_topic": "C++ polymorphism virtual override",
+                "youtube_url": "https://www.youtube.com/watch?v=oIV2KchSyGQ",
+                "youtube_label": "▶ C++ Polymorphism — The Cherno",
             },
             "4. STL Containers": {
                 "theory": "**Containers:** `vector`, `list`, `map`, `set`, `stack`, `queue`\n```cpp\nvector<int> v={1,2,3};\nv.push_back(4);\nsort(v.begin(),v.end());\nmap<string,int> m; m[\"key\"]=10;\n```",
                 "example": "```cpp\n#include<iostream>\n#include<vector>\n#include<algorithm>\n#include<map>\nusing namespace std;\nint main(){\n    vector<int> v={5,2,8,1,9};\n    sort(v.begin(),v.end());\n    for(int x:v) cout<<x<<\" \";\n    map<string,int> marks;\n    marks[\"DBMS\"]=85; marks[\"OS\"]=90;\n    for(auto &p:marks) cout<<p.first<<\":\"<<p.second<<\" \";\n}\n```",
-                "mcq_topic": "C++ STL vector map sort algorithms"
+                "mcq_topic": "C++ STL vector map sort algorithms",
+                "youtube_url": "https://www.youtube.com/watch?v=LyGlTmaWEPs",
+                "youtube_label": "▶ C++ STL — The Cherno",
             },
             "5. Templates & Generics": {
                 "theory": "**Function Template:**\n```cpp\ntemplate<typename T>\nT maxVal(T a, T b){ return (a>b)?a:b; }\n```\n**Class Template:**\n```cpp\ntemplate<typename T>\nclass Stack{ vector<T> v; public: void push(T x){v.push_back(x);} };\n```",
                 "example": "```cpp\n#include<iostream>\n#include<vector>\nusing namespace std;\ntemplate<typename T>\nT sumArr(T arr[],int n){\n    T s=0;\n    for(int i=0;i<n;i++) s+=arr[i];\n    return s;\n}\nint main(){\n    int a[]={1,2,3,4,5};\n    double b[]={1.1,2.2,3.3};\n    cout<<sumArr(a,5)<<endl;\n    cout<<sumArr(b,3)<<endl;\n}\n```",
-                "mcq_topic": "C++ templates generic programming"
+                "mcq_topic": "C++ templates generic programming",
+                "youtube_url": "https://www.youtube.com/watch?v=I-hZkUa9mIs",
+                "youtube_label": "▶ C++ Templates — The Cherno",
             },
             "6. Exception Handling": {
                 "theory": "```cpp\ntry{\n    if(x==0) throw runtime_error(\"Division by zero\");\n    cout<<10/x;\n}catch(runtime_error &e){\n    cout<<\"Error: \"<<e.what();\n}catch(...){\n    cout<<\"Unknown error\";\n}finally{ // not in C++, use RAII }\n```",
                 "example": "```cpp\n#include<iostream>\n#include<stdexcept>\nusing namespace std;\ndouble divide(double a,double b){\n    if(b==0) throw invalid_argument(\"Divisor cannot be zero\");\n    return a/b;\n}\nint main(){\n    try{\n        cout<<divide(10,2)<<endl;\n        cout<<divide(5,0)<<endl;\n    }catch(invalid_argument &e){\n        cout<<\"Caught: \"<<e.what()<<endl;\n    }\n}\n```",
-                "mcq_topic": "C++ exception handling try catch throw"
+                "mcq_topic": "C++ exception handling try catch throw",
+                "youtube_url": "https://www.youtube.com/watch?v=kjEhqgmEiWY",
+                "youtube_label": "▶ C++ Exceptions — The Cherno",
             },
             "7. File Handling & Streams": {
                 "theory": "```cpp\n#include<fstream>\nofstream out(\"file.txt\");  // write\nifstream in(\"file.txt\");   // read\nfstream f(\"file.txt\", ios::in|ios::out);\n```\n**Modes:** `ios::in`, `ios::out`, `ios::app`, `ios::binary`",
                 "example": "```cpp\n#include<iostream>\n#include<fstream>\n#include<string>\nusing namespace std;\nint main(){\n    ofstream out(\"students.txt\");\n    out<<\"Aryan 9.1\\nSara 8.5\\n\";\n    out.close();\n    ifstream in(\"students.txt\");\n    string line;\n    while(getline(in,line)) cout<<line<<endl;\n    in.close();\n}\n```",
-                "mcq_topic": "C++ file handling fstream ifstream ofstream"
+                "mcq_topic": "C++ file handling fstream ifstream ofstream",
+                "youtube_url": "https://www.youtube.com/watch?v=OmBnEqtQSGU",
+                "youtube_label": "▶ C++ File I/O — The Cherno",
             },
             "8. Smart Pointers & Memory": {
                 "theory": "**Unique Pointer** — sole ownership\n**Shared Pointer** — reference counted\n**Weak Pointer** — non-owning reference\n```cpp\n#include<memory>\nunique_ptr<int> p = make_unique<int>(42);\nshared_ptr<int> sp = make_shared<int>(10);\n```\nPrevent memory leaks — auto delete when out of scope.",
                 "example": "```cpp\n#include<iostream>\n#include<memory>\nusing namespace std;\nclass Node{ public: int val; Node(int v):val(v){ cout<<\"Created \"<<v<<endl; } ~Node(){ cout<<\"Destroyed \"<<val<<endl; } };\nint main(){\n    unique_ptr<Node> p1 = make_unique<Node>(1);\n    shared_ptr<Node> sp1 = make_shared<Node>(2);\n    shared_ptr<Node> sp2 = sp1;\n    cout<<\"Count: \"<<sp1.use_count()<<endl;\n}\n```",
-                "mcq_topic": "C++ smart pointers unique_ptr shared_ptr memory management"
+                "mcq_topic": "C++ smart pointers unique_ptr shared_ptr memory management",
+                "youtube_url": "https://www.youtube.com/watch?v=UOB7-B2MfwA",
+                "youtube_label": "▶ C++ Smart Pointers — The Cherno",
             },
         }
     },
@@ -1090,37 +2077,51 @@ CODING_CONTENT = {
             "1. Basics": {
                 "theory": "**Python** — high-level, interpreted, dynamically typed.\n\n```python\nname = \"MENTORA\"  # str\nage = 21          # int\ncgpa = 9.1        # float\nflag = True       # bool\nprint(f\"Hello {name}, CGPA={cgpa}\")\n```",
                 "example": "```python\nname = input(\"Name: \")\ncgpa = 9.1\nprint(f\"Hello {name}!\")\nprint(f\"CGPA: {cgpa:.2f}\")\na, b, c = 10, 20, 30\nprint(a + b + c)  # 60\nprint(type(cgpa)) # <class 'float'>\n```",
-                "mcq_topic": "Python basics variables data types input output"
+                "mcq_topic": "Python basics variables data types input output",
+                "youtube_url": "https://www.youtube.com/watch?v=_uQrJ0TkZlc",
+                "youtube_label": "▶ Python Full Course — Programming with Mosh",
             },
             "2. Lists Tuples Sets Dicts": {
                 "theory": "**List** — ordered, mutable: `[1,2,3]`\n**Tuple** — ordered, immutable: `(1,2,3)`\n**Set** — unique: `{1,2,3}`\n**Dict** — key-value: `{'a':1}`\n\nList comprehension: `[x*2 for x in lst if x>0]`",
                 "example": "```python\nstudents = [\n    {\"name\":\"Aryan\",\"cgpa\":9.1},\n    {\"name\":\"Sara\", \"cgpa\":8.5},\n]\ntoppers = [s[\"name\"] for s in students if s[\"cgpa\"]>=9]\nprint(\"Toppers:\",toppers)\nstudents.sort(key=lambda x:x[\"cgpa\"],reverse=True)\nfor s in students: print(f\"{s['name']}:{s['cgpa']}\")\n```",
-                "mcq_topic": "Python list tuple set dictionary comprehension"
+                "mcq_topic": "Python list tuple set dictionary comprehension",
+                "youtube_url": "https://www.youtube.com/watch?v=W8KRzm-HUcc",
+                "youtube_label": "▶ Python Lists, Tuples, Sets, Dicts — CS Dojo",
             },
             "3. Functions & Lambda": {
                 "theory": "```python\ndef func(params, default=value, *args, **kwargs):\n    return result\n\nlambda x: x**2   # anonymous function\nmap(func, lst)   # apply func to all\nfilter(func,lst) # filter by condition\n```",
                 "example": "```python\ndef cgpa(marks, credits):\n    return sum(m*c for m,c in zip(marks,credits))/sum(credits)\n\nprint(f\"{cgpa([85,90,78],[4,3,3]):.2f}\")\n\nsquare = lambda x: x*x\nnums = [1,2,3,4,5]\nprint(list(map(square, nums)))\nprint(list(filter(lambda x:x>2, nums)))\n```",
-                "mcq_topic": "Python functions lambda map filter"
+                "mcq_topic": "Python functions lambda map filter",
+                "youtube_url": "https://www.youtube.com/watch?v=9Os0o3wzS_I",
+                "youtube_label": "▶ Python Functions — Programming with Mosh",
             },
             "4. OOP": {
                 "theory": "```python\nclass ClassName:\n    def __init__(self, params):\n        self.attr = params\n    def method(self):\n        return self.attr\n\nclass Child(Parent):\n    def __init__(self): super().__init__()\n```\nDunder: `__str__`, `__len__`, `__add__`",
                 "example": "```python\nclass BankAccount:\n    def __init__(self, owner, bal=0):\n        self.owner = owner\n        self.__bal = bal\n    def deposit(self, amt): self.__bal += amt\n    def withdraw(self, amt):\n        if amt>self.__bal: print(\"Insufficient!\")\n        else: self.__bal -= amt\n    def __str__(self): return f\"{self.owner}:Rs{self.__bal}\"\n\nacc = BankAccount(\"Aryan\",1000)\nacc.deposit(500); acc.withdraw(200)\nprint(acc)  # Aryan:Rs1300\n```",
-                "mcq_topic": "Python OOP classes objects inheritance"
+                "mcq_topic": "Python OOP classes objects inheritance",
+                "youtube_url": "https://www.youtube.com/watch?v=ZDa-Z5JzLYM",
+                "youtube_label": "▶ Python OOP — Tech With Tim",
             },
             "6. Modules, Packages & Virtual Env": {
                 "theory": "```python\nimport os, sys, math, random\nfrom datetime import datetime\nimport json, csv, re\n\n# Virtual environment\n# python -m venv env\n# source env/bin/activate  (Linux/Mac)\n# env\\Scripts\\activate     (Windows)\n# pip install requests pandas numpy\n```\n**pip:** `pip install`, `pip freeze > requirements.txt`, `pip install -r requirements.txt`",
                 "example": "```python\nimport json, os, random\nfrom datetime import datetime\n\n# Save student data to JSON\nstudents = [\n    {\"name\": \"Aryan\", \"cgpa\": 9.1, \"branch\": \"CS\"},\n    {\"name\": \"Sara\",  \"cgpa\": 8.5, \"branch\": \"EC\"},\n]\nwith open(\"students.json\", \"w\") as f:\n    json.dump(students, f, indent=2)\n\nwith open(\"students.json\") as f:\n    data = json.load(f)\n\ntoppers = [s[\"name\"] for s in data if s[\"cgpa\"] >= 9.0]\nprint(f\"{datetime.now().date()} — Toppers: {toppers}\")\n```",
-                "mcq_topic": "Python modules packages import pip virtual environment"
+                "mcq_topic": "Python modules packages import pip virtual environment",
+                "youtube_url": "https://www.youtube.com/watch?v=Z1Yd7upQsXY",
+                "youtube_label": "▶ Python Modules & Packages — Tech With Tim",
             },
             "7. NumPy & Pandas Basics": {
                 "theory": "**NumPy:** fast array operations\n```python\nimport numpy as np\narr = np.array([1,2,3,4,5])\narr * 2          # vectorized\nnp.mean(arr)     # statistics\nnp.dot(A, B)     # matrix multiply\n```\n**Pandas:** tabular data\n```python\nimport pandas as pd\ndf = pd.read_csv('data.csv')\ndf['col'].mean()\ndf[df['cgpa'] > 8]\ndf.groupby('branch')['cgpa'].mean()\n```",
                 "example": "```python\nimport numpy as np\nimport pandas as pd\n\n# NumPy\nmarks = np.array([85, 92, 78, 95, 65, 88])\nprint(f\"Mean:{marks.mean():.1f} Std:{marks.std():.1f} Max:{marks.max()}\")\nprint(f\"Above 80: {marks[marks > 80]}\")\n\n# Pandas\ndata = {'name':['Aryan','Sara','Raj'],'cgpa':[9.1,8.5,7.8],'branch':['CS','EC','ME']}\ndf = pd.DataFrame(data)\nprint(df[df['cgpa'] >= 9.0][['name','cgpa']])\nprint(df.groupby('branch')['cgpa'].mean())\n```",
-                "mcq_topic": "Python NumPy Pandas arrays DataFrame groupby"
+                "mcq_topic": "Python NumPy Pandas arrays DataFrame groupby",
+                "youtube_url": "https://www.youtube.com/watch?v=vmEHCJofslg",
+                "youtube_label": "▶ Pandas & NumPy — Data School",
             },
             "8. Decorators, Generators & Context Managers": {
                 "theory": "**Decorator** — wrap a function to add behavior\n```python\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        import time\n        t = time.time()\n        result = func(*args, **kwargs)\n        print(f\"Time: {time.time()-t:.4f}s\")\n        return result\n    return wrapper\n\n@timer\ndef my_func(): ...\n```\n**Generator:** `yield` — lazy sequence\n**Context Manager:** `with` — auto cleanup",
                 "example": "```python\n# Generator — memory efficient\ndef fibonacci(n):\n    a, b = 0, 1\n    for _ in range(n):\n        yield a\n        a, b = b, a+b\n\nprint(list(fibonacci(10)))\n\n# Context manager\nclass Timer:\n    import time\n    def __enter__(self):\n        self.start = __import__('time').time()\n        return self\n    def __exit__(self, *args):\n        elapsed = __import__('time').time() - self.start\n        print(f\"Elapsed: {elapsed:.4f}s\")\n\nwith Timer():\n    total = sum(fibonacci(1000))\nprint(total)\n```",
-                "mcq_topic": "Python decorators generators yield context managers with"
+                "mcq_topic": "Python decorators generators yield context managers with",
+                "youtube_url": "https://www.youtube.com/watch?v=MYAEv3JoenI",
+                "youtube_label": "▶ Python Decorators & Generators — Corey Schafer",
             },
         }
     },
@@ -1130,37 +2131,51 @@ CODING_CONTENT = {
             "1. Basics & JVM": {
                 "theory": "**Java** — platform independent, OOP, automatic GC\n```\n.java → javac → .class (bytecode) → JVM → Output\n```\n```java\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Hello!\");\n    }\n}\n```",
                 "example": "```java\npublic class Main {\n    public static void main(String[] args) {\n        String name = \"Aryan\";\n        int age = 21;\n        double cgpa = 9.1;\n        System.out.println(\"Name: \"+name);\n        System.out.printf(\"CGPA: %.2f%n\",cgpa);\n        int marks = (int)(cgpa*10);\n        System.out.println(\"Marks:\"+marks);\n    }\n}\n```",
-                "mcq_topic": "Java basics JVM architecture main method"
+                "mcq_topic": "Java basics JVM architecture main method",
+                "youtube_url": "https://www.youtube.com/watch?v=eIrMbAQSU34",
+                "youtube_label": "▶ Java Full Course — Programming with Mosh",
             },
             "2. OOP & Inheritance": {
                 "theory": "```java\nclass Animal{\n    public void speak(){System.out.println(\"...\");}\n}\nclass Dog extends Animal{\n    @Override\n    public void speak(){System.out.println(\"Woof!\");}\n}\n```\n**Interface:** `interface Drawable { void draw(); }`",
                 "example": "```java\nabstract class Shape{\n    abstract double area();\n    void show(){ System.out.printf(\"Area:%.2f%n\",area()); }\n}\nclass Circle extends Shape{\n    double r; Circle(double r){this.r=r;}\n    double area(){return Math.PI*r*r;}\n}\npublic class Main{\n    public static void main(String[] a){\n        new Circle(5).show();\n    }\n}\n```",
-                "mcq_topic": "Java OOP inheritance abstract interface"
+                "mcq_topic": "Java OOP inheritance abstract interface",
+                "youtube_url": "https://www.youtube.com/watch?v=Zs342ePFvRI",
+                "youtube_label": "▶ Java OOP — Telusko",
             },
             "3. Collections Framework": {
                 "theory": "```java\nArrayList<String> list = new ArrayList<>();\nlist.add(\"DBMS\");\nHashMap<String,Integer> map = new HashMap<>();\nmap.put(\"OS\",90);\nCollections.sort(list);\n```\nHierarchy: Collection → List, Set, Queue; Map (separate)",
                 "example": "```java\nimport java.util.*;\npublic class Main{\n    public static void main(String[] a){\n        ArrayList<String> sub=new ArrayList<>();\n        sub.add(\"DBMS\"); sub.add(\"OS\"); sub.add(\"CN\");\n        Collections.sort(sub);\n        System.out.println(sub);\n        HashMap<String,Integer> m=new HashMap<>();\n        m.put(\"DBMS\",85); m.put(\"OS\",92);\n        m.forEach((k,v)->System.out.println(k+\":\"+v));\n    }\n}\n```",
-                "mcq_topic": "Java ArrayList HashMap Collections sort"
+                "mcq_topic": "Java ArrayList HashMap Collections sort",
+                "youtube_url": "https://www.youtube.com/watch?v=1E6-IzfRqIc",
+                "youtube_label": "▶ Java Collections — Telusko",
             },
             "4. Exception Handling": {
                 "theory": "```java\ntry{\n    int x = 10/0;\n}catch(ArithmeticException e){\n    System.out.println(\"Error: \"+e.getMessage());\n}catch(Exception e){\n    e.printStackTrace();\n}finally{\n    System.out.println(\"Always runs\");\n}\n```\n**Custom Exception:** `class MyEx extends Exception{}`",
                 "example": "```java\nimport java.io.*;\npublic class Main{\n    static int divide(int a,int b) throws ArithmeticException{\n        if(b==0) throw new ArithmeticException(\"Zero divisor\");\n        return a/b;\n    }\n    public static void main(String[] args){\n        try{\n            System.out.println(divide(10,2));\n            System.out.println(divide(5,0));\n        }catch(ArithmeticException e){\n            System.out.println(\"Caught: \"+e.getMessage());\n        }finally{\n            System.out.println(\"Done\");\n        }\n    }\n}\n```",
-                "mcq_topic": "Java exception handling try catch finally throws"
+                "mcq_topic": "Java exception handling try catch finally throws",
+                "youtube_url": "https://www.youtube.com/watch?v=W-N2ltgU-X4",
+                "youtube_label": "▶ Java Exceptions — Telusko",
             },
             "5. Multithreading": {
                 "theory": "**Thread creation:**\n1. Extend `Thread` class\n2. Implement `Runnable` interface\n\n```java\nclass MyThread extends Thread{\n    public void run(){ System.out.println(\"Running\"); }\n}\nnew MyThread().start();\n```\n**Synchronization:** `synchronized` keyword prevents race conditions",
                 "example": "```java\nclass Counter{\n    private int count=0;\n    synchronized void increment(){ count++; }\n    int get(){ return count; }\n}\npublic class Main{\n    public static void main(String[] a) throws InterruptedException{\n        Counter c=new Counter();\n        Thread t1=new Thread(()->{ for(int i=0;i<1000;i++) c.increment(); });\n        Thread t2=new Thread(()->{ for(int i=0;i<1000;i++) c.increment(); });\n        t1.start(); t2.start();\n        t1.join(); t2.join();\n        System.out.println(c.get()); // 2000\n    }\n}\n```",
-                "mcq_topic": "Java multithreading Thread Runnable synchronized"
+                "mcq_topic": "Java multithreading Thread Runnable synchronized",
+                "youtube_url": "https://www.youtube.com/watch?v=TCd8QIS-2KI",
+                "youtube_label": "▶ Java Multithreading — Telusko",
             },
             "6. Java 8 — Streams & Lambda": {
                 "theory": "```java\n// Lambda\nlist.forEach(x -> System.out.println(x));\n// Stream pipeline\nlist.stream()\n    .filter(x -> x > 5)\n    .map(x -> x * 2)\n    .collect(Collectors.toList());\n// Optional\nOptional<String> opt = Optional.of(\"MENTORA\");\nopt.ifPresent(System.out::println);\n```",
                 "example": "```java\nimport java.util.*;\nimport java.util.stream.*;\npublic class Main{\n    public static void main(String[] a){\n        List<Integer> marks=Arrays.asList(85,92,78,95,65,88);\n        double avg=marks.stream().mapToInt(Integer::intValue).average().orElse(0);\n        List<Integer> pass=marks.stream().filter(m->m>=80).sorted().collect(Collectors.toList());\n        System.out.printf(\"Avg: %.1f%n\",avg);\n        System.out.println(\"Passed: \"+pass);\n    }\n}\n```",
-                "mcq_topic": "Java 8 streams lambda filter map collect"
+                "mcq_topic": "Java 8 streams lambda filter map collect",
+                "youtube_url": "https://www.youtube.com/watch?v=t1-YZ6bF-g0",
+                "youtube_label": "▶ Java 8 Streams & Lambda — Telusko",
             },
             "7. JDBC & File I/O": {
                 "theory": "**File I/O:**\n```java\nBufferedReader br = new BufferedReader(new FileReader(\"f.txt\"));\nBufferedWriter bw = new BufferedWriter(new FileWriter(\"f.txt\"));\n```\n**JDBC Steps:** Load driver → getConnection → createStatement → executeQuery → ResultSet → close",
                 "example": "```java\nimport java.io.*;\nimport java.nio.file.*;\npublic class Main{\n    public static void main(String[] a) throws IOException{\n        // Write\n        List<String> lines=Arrays.asList(\"Aryan,CS,9.1\",\"Sara,EC,8.5\");\n        Files.write(Paths.get(\"students.txt\"),lines);\n        // Read\n        Files.lines(Paths.get(\"students.txt\"))\n             .map(l->l.split(\",\"))\n             .forEach(p->System.out.println(p[0]+\": CGPA \"+p[2]));\n    }\n}\n```",
-                "mcq_topic": "Java file I/O JDBC BufferedReader FileWriter"
+                "mcq_topic": "Java file I/O JDBC BufferedReader FileWriter",
+                "youtube_url": "https://www.youtube.com/watch?v=ScUJx4aToHI",
+                "youtube_label": "▶ Java File I/O — Telusko",
             },
         }
     },
@@ -1170,42 +2185,58 @@ CODING_CONTENT = {
             "1. Arrays & Searching": {
                 "theory": "**Linear Search:** O(n) — scan each element\n**Binary Search:** O(log n) — only on sorted array\n```python\ndef binary_search(arr, t):\n    l,h=0,len(arr)-1\n    while l<=h:\n        m=(l+h)//2\n        if arr[m]==t: return m\n        elif arr[m]<t: l=m+1\n        else: h=m-1\n    return -1\n```",
                 "example": "```python\ndef binary_search(arr, t):\n    l,h,steps=0,len(arr)-1,0\n    while l<=h:\n        steps+=1; m=(l+h)//2\n        if arr[m]==t: return m,steps\n        elif arr[m]<t: l=m+1\n        else: h=m-1\n    return -1,steps\n\narr=list(range(1,101))\nidx,s=binary_search(arr,73)\nprint(f\"Found at {idx} in {s} steps\")\n# Only ~7 steps vs 73 for linear!\n```",
-                "mcq_topic": "DSA linear search binary search complexity"
+                "mcq_topic": "DSA linear search binary search complexity",
+                "youtube_url": "https://www.youtube.com/watch?v=v4cd1O4zkGw",
+                "youtube_label": "▶ Binary Search — HackerRank",
             },
             "2. Sorting": {
                 "theory": "| Algorithm | Average | Worst | Stable |\n|-----------|---------|-------|--------|\n| Bubble | O(n²) | O(n²) | ✅ |\n| Merge | O(n logn) | O(n logn) | ✅ |\n| Quick | O(n logn) | O(n²) | ❌ |\n| Heap | O(n logn) | O(n logn) | ❌ |",
                 "example": "```python\ndef merge_sort(arr):\n    if len(arr)<=1: return arr\n    m=len(arr)//2\n    l=merge_sort(arr[:m]); r=merge_sort(arr[m:])\n    res,i,j=[],0,0\n    while i<len(l) and j<len(r):\n        if l[i]<=r[j]: res.append(l[i]);i+=1\n        else: res.append(r[j]);j+=1\n    return res+l[i:]+r[j:]\n\nprint(merge_sort([38,27,43,3,9,82,10]))\n# [3,9,10,27,38,43,82]\n```",
-                "mcq_topic": "DSA sorting bubble merge quick complexity"
+                "mcq_topic": "DSA sorting bubble merge quick complexity",
+                "youtube_url": "https://www.youtube.com/watch?v=kp8DLJbKERo",
+                "youtube_label": "▶ Sorting Algorithms — Computerphile",
             },
             "3. Linked List": {
                 "theory": "**Singly Linked List** — each node has data + next pointer\n\n| Operation | Array | Linked List |\n|-----------|-------|-------------|\n| Access | O(1) | O(n) |\n| Insert head | O(n) | O(1) |\n| Delete head | O(n) | O(1) |",
                 "example": "```python\nclass Node:\n    def __init__(self,d): self.data=d; self.next=None\nclass LL:\n    def __init__(self): self.head=None\n    def insert(self,d):\n        n=Node(d); n.next=self.head; self.head=n\n    def show(self):\n        c=self.head\n        while c: print(c.data,end=\" -> \"); c=c.next\n        print(\"None\")\nll=LL()\nfor v in [1,2,3,4,5]: ll.insert(v)\nll.show()  # 5->4->3->2->1->None\n```",
-                "mcq_topic": "DSA linked list singly node insertion"
+                "mcq_topic": "DSA linked list singly node insertion",
+                "youtube_url": "https://www.youtube.com/watch?v=njTh_OwMljA",
+                "youtube_label": "▶ Linked Lists — HackerRank",
             },
             "4. Stack & Queue": {
                 "theory": "**Stack** — LIFO: `append()` push, `pop()` pop\n**Queue** — FIFO: `append()` enqueue, `popleft()` dequeue\n\n**Stack uses:** Undo/Redo, balanced brackets, function calls\n**Queue uses:** BFS, CPU scheduling, print spooling",
                 "example": "```python\n# Balanced brackets using stack\ndef balanced(expr):\n    stk=[]; pairs={')':'(',']':'[','}':'{'}\n    for c in expr:\n        if c in '([{': stk.append(c)\n        elif c in ')]}' :\n            if not stk or stk[-1]!=pairs[c]: return False\n            stk.pop()\n    return not stk\nprint(balanced(\"({[]})\"))  # True\nprint(balanced(\"({[})\"))   # False\n```",
-                "mcq_topic": "DSA stack queue LIFO FIFO"
+                "mcq_topic": "DSA stack queue LIFO FIFO",
+                "youtube_url": "https://www.youtube.com/watch?v=wjI1WNcIntg",
+                "youtube_label": "▶ Stacks & Queues — HackerRank",
             },
             "5. Trees & Graphs": {
                 "theory": "**BST:** Left < Root < Right\n**Traversals:** Inorder(LRR), Preorder(RLL), Postorder(LLR)\n\n**Graph:** Adjacency List O(V+E)\n- BFS — O(V+E) shortest unweighted path\n- DFS — O(V+E) cycle detection",
                 "example": "```python\nclass BST:\n    def __init__(self,v): self.v=v; self.l=self.r=None\n    def insert(self,v):\n        if v<self.v:\n            if self.l: self.l.insert(v)\n            else: self.l=BST(v)\n        else:\n            if self.r: self.r.insert(v)\n            else: self.r=BST(v)\n    def inorder(self):\n        return (self.l.inorder() if self.l else [])+[self.v]+(self.r.inorder() if self.r else [])\nroot=BST(50)\nfor v in [30,70,20,40,60,80]: root.insert(v)\nprint(root.inorder())  # sorted!\n```",
-                "mcq_topic": "DSA BST tree traversal graph BFS DFS"
+                "mcq_topic": "DSA BST tree traversal graph BFS DFS",
+                "youtube_url": "https://www.youtube.com/watch?v=oSWTXtMglKE",
+                "youtube_label": "▶ Trees & Graphs — HackerRank",
             },
             "6. Dynamic Programming": {
                 "theory": "**DP** = Recursion + Memoization\n**Two approaches:** Top-down (memoization), Bottom-up (tabulation)\n**Key problems:** Fibonacci, 0/1 Knapsack, LCS, LIS, Coin Change\n\n**Overlapping subproblems + Optimal substructure** → use DP",
                 "example": "```python\n# 0/1 Knapsack — O(n*W)\ndef knapsack(weights, values, W):\n    n = len(weights)\n    dp = [[0]*(W+1) for _ in range(n+1)]\n    for i in range(1, n+1):\n        for w in range(W+1):\n            dp[i][w] = dp[i-1][w]\n            if weights[i-1] <= w:\n                dp[i][w] = max(dp[i][w],\n                    values[i-1] + dp[i-1][w-weights[i-1]])\n    return dp[n][W]\n\nprint(knapsack([2,3,4,5],[3,4,5,6], 8))  # 10\n```",
-                "mcq_topic": "DSA dynamic programming memoization tabulation knapsack"
+                "mcq_topic": "DSA dynamic programming memoization tabulation knapsack",
+                "youtube_url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+                "youtube_label": "▶ Dynamic Programming — freeCodeCamp",
             },
             "7. Heap & Priority Queue": {
                 "theory": "**Min-Heap:** parent ≤ children (root = minimum)\n**Max-Heap:** parent ≥ children (root = maximum)\n\n**Operations:** Insert O(log n), Extract-min/max O(log n), Heapify O(n)\n\n**Uses:** Priority queue, Dijkstra, Prim's, K largest elements, Heap sort",
                 "example": "```python\nimport heapq\n\n# Min-heap (default in Python)\nheap = []\nfor val in [5, 3, 8, 1, 9, 2]:\n    heapq.heappush(heap, val)\nprint([heapq.heappop(heap) for _ in range(3)])  # [1,2,3]\n\n# K largest elements\ndef k_largest(nums, k):\n    return heapq.nlargest(k, nums)\n\nnums = [3, 2, 1, 5, 6, 4]\nprint(k_largest(nums, 3))  # [6, 5, 4]\n```",
-                "mcq_topic": "DSA heap priority queue min-heap max-heap heapify"
+                "mcq_topic": "DSA heap priority queue min-heap max-heap heapify",
+                "youtube_url": "https://www.youtube.com/watch?v=t0Cq6tVNRBA",
+                "youtube_label": "▶ Heaps — HackerRank",
             },
             "8. Hashing & Hash Maps": {
                 "theory": "**Hash Function** maps key → index in O(1) average\n**Collision Resolution:**\n- Chaining (linked list at index)\n- Open Addressing (linear probing, quadratic)\n\n**Load Factor** = n/m; resize when > 0.75\n**Python dict** = hash map; average O(1) get/set/delete",
                 "example": "```python\n# Two Sum — O(n) using hash map\ndef two_sum(nums, target):\n    seen = {}  # value -> index\n    for i, n in enumerate(nums):\n        complement = target - n\n        if complement in seen:\n            return [seen[complement], i]\n        seen[n] = i\n    return []\n\nprint(two_sum([2,7,11,15], 9))   # [0, 1]\nprint(two_sum([3,2,4], 6))       # [1, 2]\n\n# Frequency counter\nfrom collections import Counter\nwords = ['cat','dog','cat','bird','dog','cat']\nprint(Counter(words).most_common(2))  # [('cat',3),('dog',2)]\n```",
-                "mcq_topic": "DSA hashing hash map collision resolution load factor"
+                "mcq_topic": "DSA hashing hash map collision resolution load factor",
+                "youtube_url": "https://www.youtube.com/watch?v=shs0KM3wKv8",
+                "youtube_label": "▶ Hash Tables — HackerRank",
             },
         }
     },
@@ -1215,32 +2246,44 @@ CODING_CONTENT = {
             "1. DDL Commands": {
                 "theory": "**SQL Types:** DDL, DML, DQL, DCL, TCL\n\n```sql\nCREATE TABLE Students(\n    roll INT PRIMARY KEY,\n    name VARCHAR(50) NOT NULL,\n    cgpa DECIMAL(3,2),\n    branch VARCHAR(30)\n);\nALTER TABLE Students ADD email VARCHAR(50);\nDROP TABLE Students;\n```",
                 "example": "```sql\nCREATE DATABASE MentoraAI;\nUSE MentoraAI;\nCREATE TABLE Students(\n    roll INT PRIMARY KEY AUTO_INCREMENT,\n    name VARCHAR(50) NOT NULL,\n    branch VARCHAR(30),\n    cgpa DECIMAL(3,2) CHECK(cgpa BETWEEN 0 AND 10)\n);\nINSERT INTO Students(name,branch,cgpa)\nVALUES('Aryan','CS',9.10),('Sara','EC',8.50);\nSELECT * FROM Students;\n```",
-                "mcq_topic": "SQL DDL CREATE ALTER DROP constraints"
+                "mcq_topic": "SQL DDL CREATE ALTER DROP constraints",
+                "youtube_url": "https://www.youtube.com/watch?v=HXV3zeQKqGY",
+                "youtube_label": "▶ SQL Full Course — freeCodeCamp",
             },
             "2. SELECT & DML": {
                 "theory": "```sql\nSELECT col FROM table\nWHERE condition\nGROUP BY col HAVING condition\nORDER BY col DESC LIMIT n;\n```\n**Aggregates:** `COUNT SUM AVG MAX MIN`\n**Operators:** `BETWEEN IN LIKE IS NULL`",
                 "example": "```sql\nSELECT name,cgpa FROM Students WHERE cgpa>=9.0;\nSELECT branch, COUNT(*) AS total, AVG(cgpa) AS avg_cgpa\nFROM Students\nGROUP BY branch HAVING AVG(cgpa)>8\nORDER BY avg_cgpa DESC;\nSELECT * FROM Students WHERE name LIKE 'A%';\nSELECT * FROM Students\nORDER BY cgpa DESC LIMIT 3;\n```",
-                "mcq_topic": "SQL SELECT WHERE GROUP BY aggregate functions"
+                "mcq_topic": "SQL SELECT WHERE GROUP BY aggregate functions",
+                "youtube_url": "https://www.youtube.com/watch?v=7S_tz1z_5bA",
+                "youtube_label": "▶ SQL for Beginners — Programming with Mosh",
             },
             "3. JOINs": {
                 "theory": "**INNER JOIN** — matching rows both tables\n**LEFT JOIN** — all left + matching right\n**RIGHT JOIN** — all right + matching left\n**FULL JOIN** — all rows both\n\n```sql\nSELECT a.col, b.col\nFROM A INNER JOIN B ON A.key=B.key;\n```",
                 "example": "```sql\n-- Students with department name\nSELECT s.name, s.cgpa, d.dept_name\nFROM Students s\nINNER JOIN Departments d ON s.dept_id=d.dept_id;\n\n-- LEFT JOIN: show all students\nSELECT s.name,\n       COALESCE(d.dept_name,'No Dept') AS dept\nFROM Students s\nLEFT JOIN Departments d ON s.dept_id=d.dept_id;\n```",
-                "mcq_topic": "SQL INNER LEFT RIGHT JOIN types"
+                "mcq_topic": "SQL INNER LEFT RIGHT JOIN types",
+                "youtube_url": "https://www.youtube.com/watch?v=9yeOJ0ZMUYw",
+                "youtube_label": "▶ SQL JOINs Explained — Corey Schafer",
             },
             "4. Subqueries & Views": {
                 "theory": "**Subquery** — query inside query\n```sql\nSELECT name FROM Students\nWHERE cgpa > (SELECT AVG(cgpa) FROM Students);\n```\n**View** — virtual table\n```sql\nCREATE VIEW TopStudents AS\nSELECT name, cgpa FROM Students WHERE cgpa >= 9.0;\nSELECT * FROM TopStudents;\n```\n**Correlated subquery** — references outer query",
                 "example": "```sql\n-- Subquery: students above average CGPA\nSELECT name, cgpa\nFROM Students\nWHERE cgpa > (SELECT AVG(cgpa) FROM Students)\nORDER BY cgpa DESC;\n\n-- EXISTS subquery\nSELECT name FROM Students s\nWHERE EXISTS (\n    SELECT 1 FROM Enrollments e\n    WHERE e.student_id = s.roll\n);\n\n-- View\nCREATE VIEW BranchSummary AS\nSELECT branch, COUNT(*) as count, ROUND(AVG(cgpa),2) as avg_cgpa\nFROM Students GROUP BY branch;\n```",
-                "mcq_topic": "SQL subqueries views EXISTS correlated"
+                "mcq_topic": "SQL subqueries views EXISTS correlated",
+                "youtube_url": "https://www.youtube.com/watch?v=m1KcNV-Zhmc",
+                "youtube_label": "▶ SQL Subqueries & Views — Caleb Curry",
             },
             "5. Stored Procedures & Triggers": {
                 "theory": "**Stored Procedure:**\n```sql\nDELIMITER //\nCREATE PROCEDURE GetToppers(IN min_cgpa FLOAT)\nBEGIN\n    SELECT * FROM Students WHERE cgpa >= min_cgpa;\nEND //\nCALL GetToppers(9.0);\n```\n**Trigger:** Auto-executes on INSERT/UPDATE/DELETE",
                 "example": "```sql\n-- Stored Procedure with OUT param\nDELIMITER //\nCREATE PROCEDURE GetBranchAvg(\n    IN branch_name VARCHAR(30),\n    OUT avg_result FLOAT)\nBEGIN\n    SELECT AVG(cgpa) INTO avg_result\n    FROM Students WHERE branch=branch_name;\nEND //\nCALL GetBranchAvg('CS', @result);\nSELECT @result;\n\n-- Trigger: log updates\nCREATE TRIGGER after_cgpa_update\nAFTER UPDATE ON Students\nFOR EACH ROW\nINSERT INTO AuditLog(student_id, old_cgpa, new_cgpa, changed_at)\nVALUES(OLD.roll, OLD.cgpa, NEW.cgpa, NOW());\n```",
-                "mcq_topic": "SQL stored procedures triggers DELIMITER"
+                "mcq_topic": "SQL stored procedures triggers DELIMITER",
+                "youtube_url": "https://www.youtube.com/watch?v=OkTa6kgFbR0",
+                "youtube_label": "▶ Stored Procedures & Triggers — Traversy Media",
             },
             "6. Indexing & Normalization": {
                 "theory": "**Index** — speeds up SELECT, slows INSERT/UPDATE\n```sql\nCREATE INDEX idx_cgpa ON Students(cgpa);\nCREATE UNIQUE INDEX idx_email ON Students(email);\n```\n**Normalization:**\n- **1NF** — atomic values, no repeating groups\n- **2NF** — 1NF + no partial dependency\n- **3NF** — 2NF + no transitive dependency\n- **BCNF** — every determinant is a candidate key",
                 "example": "```sql\n-- Check query plan with index\nEXPLAIN SELECT * FROM Students WHERE cgpa > 8.5;\n\n-- Composite index\nCREATE INDEX idx_branch_cgpa ON Students(branch, cgpa);\n\n-- Normalization example: decompose\n-- Unnormalized: Orders(order_id, customer_name, customer_city, product, qty)\n-- 3NF: Customers(cust_id, name, city)\n--      Orders(order_id, cust_id, product_id, qty)\n--      Products(product_id, name, price)\n```",
-                "mcq_topic": "SQL indexing normalization 1NF 2NF 3NF BCNF"
+                "mcq_topic": "SQL indexing normalization 1NF 2NF 3NF BCNF",
+                "youtube_url": "https://www.youtube.com/watch?v=GFQaEYEc8_8",
+                "youtube_label": "▶ Database Normalization — Decomplexify",
             },
         }
     },
@@ -1250,77 +2293,44 @@ CODING_CONTENT = {
             "1. Basics & Functions": {
                 "theory": "```javascript\nlet name = \"MENTORA\";  // block scoped\nconst PI = 3.14;        // constant\nvar x = 10;             // function scoped\n\n// Arrow function\nconst square = x => x*x;\nconst add = (a,b) => a+b;\n```\n**Types:** number, string, boolean, null, undefined, object",
                 "example": "```javascript\nconst marks = [85,92,78,95,88];\nconst avg = marks.reduce((a,b)=>a+b,0)/marks.length;\nconst passed = marks.filter(m=>m>=80);\nconst grades = marks.map(m=>m>=90?'A':'B');\nconsole.log(`Avg:${avg.toFixed(1)}`);\nconsole.log('Passed:',passed);\nconsole.log('Grades:',grades);\nconst [first,...rest] = marks;\nconsole.log(first, rest);\n```",
-                "mcq_topic": "JavaScript variables functions arrow const let"
+                "mcq_topic": "JavaScript variables functions arrow const let",
+                "youtube_url": "https://www.youtube.com/watch?v=PkZNo7MFNFg",
+                "youtube_label": "▶ JavaScript Full Course — freeCodeCamp",
             },
             "2. Async & Promises": {
                 "theory": "**Callback** → **Promise** → **Async/Await**\n```javascript\nasync function getData(url) {\n    try {\n        const res = await fetch(url);\n        const data = await res.json();\n        return data;\n    } catch(err) {\n        console.error(err);\n    }\n}\n```",
                 "example": "```javascript\nasync function fetchStudent(id) {\n    try {\n        const res = await fetch(`/api/students/${id}`);\n        if(!res.ok) throw new Error(res.status);\n        const student = await res.json();\n        console.log(`${student.name}: ${student.cgpa}`);\n        return student;\n    } catch(e) {\n        console.error('Error:',e.message);\n    }\n}\n// Promise.all — parallel requests\nPromise.all([fetch('/api/a'), fetch('/api/b')])\n    .then(responses => Promise.all(responses.map(r=>r.json())))\n    .then(([a,b]) => console.log(a,b));\n```",
-                "mcq_topic": "JavaScript async await promises fetch API"
+                "mcq_topic": "JavaScript async await promises fetch API",
+                "youtube_url": "https://www.youtube.com/watch?v=DHvZLI7Db8E",
+                "youtube_label": "▶ Async JavaScript — The Net Ninja",
             },
             "3. DOM Manipulation": {
                 "theory": "```javascript\n// Select elements\nconst el = document.getElementById('id');\nconst els = document.querySelectorAll('.class');\n// Modify\nel.textContent = 'New text';\nel.style.color = 'red';\nel.classList.add('active');\n// Create/append\nconst div = document.createElement('div');\ndocument.body.appendChild(div);\n// Events\nel.addEventListener('click', handler);\n```",
                 "example": "```javascript\n// Dynamic todo list\nfunction addTask(text) {\n    const li = document.createElement('li');\n    li.textContent = text;\n    const btn = document.createElement('button');\n    btn.textContent = 'Delete';\n    btn.onclick = () => li.remove();\n    li.appendChild(btn);\n    document.getElementById('list').appendChild(li);\n}\ndocument.getElementById('add').addEventListener('click', () => {\n    const val = document.getElementById('input').value;\n    if(val.trim()) addTask(val);\n});\n```",
-                "mcq_topic": "JavaScript DOM manipulation events querySelector"
+                "mcq_topic": "JavaScript DOM manipulation events querySelector",
+                "youtube_url": "https://www.youtube.com/watch?v=0ik6X4DJKCc",
+                "youtube_label": "▶ JavaScript DOM — Traversy Media",
             },
             "4. ES6+ Features": {
                 "theory": "**Destructuring:**\n```javascript\nconst {name, age} = student;\nconst [first, ...rest] = arr;\n```\n**Spread/Rest:**\n```javascript\nconst merged = {...obj1, ...obj2};\nfunction sum(...nums){ return nums.reduce((a,b)=>a+b,0); }\n```\n**Template Literals, Optional Chaining, Nullish Coalescing:**\n```javascript\nconst val = obj?.prop?.nested ?? 'default';\n```",
                 "example": "```javascript\n// Destructuring + default values\nconst { name='Unknown', cgpa=0, branch='CS' } = student;\n// Object spread (immutable update)\nconst updated = { ...student, cgpa: 9.5 };\n// Array methods chaining\nconst topStudents = students\n    .filter(s => s.cgpa >= 9.0)\n    .sort((a,b) => b.cgpa - a.cgpa)\n    .slice(0, 3)\n    .map(({name, cgpa}) => `${name}: ${cgpa}`);\nconsole.log(topStudents);\n```",
-                "mcq_topic": "JavaScript ES6 destructuring spread rest optional chaining"
+                "mcq_topic": "JavaScript ES6 destructuring spread rest optional chaining",
+                "youtube_url": "https://www.youtube.com/watch?v=ncpTxqK35PI",
+                "youtube_label": "▶ ES6+ JavaScript — Academind",
             },
             "5. OOP in JavaScript": {
                 "theory": "```javascript\nclass Animal {\n    constructor(name) { this.name = name; }\n    speak() { return `${this.name} makes a sound`; }\n}\nclass Dog extends Animal {\n    speak() { return `${this.name} barks!`; }\n}\n```\n**Prototype chain:** All objects inherit from `Object.prototype`",
                 "example": "```javascript\nclass BankAccount {\n    #balance = 0;  // private field\n    constructor(owner, initial=0) {\n        this.owner = owner;\n        this.#balance = initial;\n    }\n    deposit(amt) { this.#balance += amt; return this; }\n    withdraw(amt) {\n        if(amt > this.#balance) throw new Error('Insufficient funds');\n        this.#balance -= amt; return this;\n    }\n    get balance() { return this.#balance; }\n}\nconst acc = new BankAccount('Aryan', 1000);\nacc.deposit(500).withdraw(200);\nconsole.log(acc.balance); // 1300\n```",
-                "mcq_topic": "JavaScript classes OOP prototype inheritance"
+                "mcq_topic": "JavaScript classes OOP prototype inheritance",
+                "youtube_url": "https://www.youtube.com/watch?v=PFmuCDHHpwk",
+                "youtube_label": "▶ JavaScript OOP — Traversy Media",
             },
             "6. Node.js & Modules": {
                 "theory": "**CommonJS (Node):**\n```javascript\nconst fs = require('fs');\nmodule.exports = { func };\n```\n**ES Modules:**\n```javascript\nimport { func } from './module.js';\nexport const PI = 3.14;\n```\n**Event Loop:** Single-threaded, non-blocking I/O via libuv\n**npm:** `npm init`, `npm install express`, `package.json`",
                 "example": "```javascript\n// Simple Express server\nconst express = require('express');\nconst app = express();\napp.use(express.json());\nconst students = [];\napp.get('/students', (req, res) => res.json(students));\napp.post('/students', (req, res) => {\n    students.push(req.body);\n    res.status(201).json(req.body);\n});\napp.listen(3000, () => console.log('Server running on port 3000'));\n```",
-                "mcq_topic": "JavaScript Node.js Express modules npm event loop"
-            },
-        }
-    },
-    "R Programming": {
-        "icon": "🟦", "color": "#1d6fa5",
-        "chapters": {
-            "1. R Basics & Data Types": {
-                "theory": "**R** is a language for statistical computing and graphics.\n\n**Data Types:**\n```r\nx <- 42L          # integer\ny <- 3.14         # numeric\nname <- \"MENTORA\" # character\nflag <- TRUE      # logical\ncx <- 2+3i        # complex\n```\n**Key functions:** `class()`, `typeof()`, `is.numeric()`, `as.character()`\n\n**Vectors** (R's most basic structure):\n```r\nmarks <- c(85, 92, 78, 95, 88)\nmarks[1]          # 85 (1-indexed!)\nmarks[marks > 80] # filter\n```",
-                "example": "```r\n# Student data example\nnames  <- c(\"Aryan\",\"Sara\",\"Rahul\")\ncgpa   <- c(9.1, 8.5, 7.8)\nbranch <- c(\"CS\",\"EC\",\"ME\")\n\ncat(\"Students:\", length(names), \"\\n\")\ncat(\"Avg CGPA:\", mean(cgpa), \"\\n\")\ncat(\"Max CGPA:\", max(cgpa), \"\\n\")\ncat(\"Toppers:\", names[cgpa >= 9.0], \"\\n\")\n```",
-                "mcq_topic": "R programming basics data types vectors assignment operator"
-            },
-            "2. Data Structures in R": {
-                "theory": "**Matrix:**\n```r\nm <- matrix(1:9, nrow=3, ncol=3)\n```\n**Data Frame** (most used for data analysis):\n```r\ndf <- data.frame(\n  name=c(\"A\",\"B\",\"C\"),\n  score=c(85,90,78),\n  pass=c(T,T,T)\n)\ndf$score       # column access\ndf[1,]         # row access\n```\n**List** (mixed types):\n```r\nstudent <- list(name=\"Aryan\", cgpa=9.1, subjects=c(\"OS\",\"DS\"))\nstudent$name   # access by name\n```\n**Factor** (categorical):\n```r\ngrades <- factor(c(\"A\",\"B\",\"A\",\"C\"))\nlevels(grades)\n```",
-                "example": "```r\n# Working with a data frame\ndf <- data.frame(\n  subject = c(\"DBMS\",\"OS\",\"CN\",\"DS\"),\n  marks   = c(88, 75, 92, 85),\n  credits = c(4, 4, 3, 4)\n)\ncat(\"Pass count:\", sum(df$marks >= 40), \"\\n\")\ncat(\"Avg Marks:\", mean(df$marks), \"\\n\")\ncat(\"Best:\",      df$subject[which.max(df$marks)], \"\\n\")\n# Add a new column\ndf$grade <- ifelse(df$marks >= 90, \"A\", ifelse(df$marks >= 75, \"B\", \"C\"))\nprint(df)\n```",
-                "mcq_topic": "R matrix data frame list factor structure"
-            },
-            "3. Control Flow & Functions": {
-                "theory": "**Conditionals:**\n```r\nif (cgpa >= 9.0) {\n  cat(\"Distinction\")\n} else if (cgpa >= 7.5) {\n  cat(\"First Class\")\n} else {\n  cat(\"Pass\")\n}\n```\n**Loops:**\n```r\nfor (i in 1:5) { cat(i, \"\") }\nwhile (x > 0) { x <- x - 1 }\n```\n**Functions:**\n```r\ncalc_gpa <- function(marks, credits) {\n  sum(marks * credits) / sum(credits)\n}\nresult <- calc_gpa(c(85,90), c(4,3))\n```\n**apply family:** `sapply()`, `lapply()`, `apply()`",
-                "example": "```r\n# Grade calculator function\nget_grade <- function(marks) {\n  sapply(marks, function(m) {\n    if (m >= 90) \"O\"\n    else if (m >= 80) \"A+\"\n    else if (m >= 70) \"A\"\n    else if (m >= 60) \"B+\"\n    else if (m >= 50) \"B\"\n    else \"F\"\n  })\n}\nmarks <- c(95, 83, 72, 61, 45)\ngrades <- get_grade(marks)\ncat(\"Grades:\", grades, \"\\n\")\ncat(\"Pass rate:\", mean(marks >= 50)*100, \"%\\n\")\n```",
-                "mcq_topic": "R functions control flow if else for loop apply sapply"
-            },
-            "4. Data Manipulation with dplyr": {
-                "theory": "**dplyr** is the go-to package for data manipulation.\n```r\nlibrary(dplyr)\n```\n**Key verbs:**\n- `filter()` — select rows\n- `select()` — select columns\n- `mutate()` — add/transform columns\n- `summarise()` — aggregate\n- `arrange()` — sort\n- `group_by()` — group for aggregation\n\n**Pipe operator `%>%`** (or `|>` in R 4.1+):\n```r\ndf %>% filter(score > 80) %>% arrange(desc(score))\n```",
-                "example": "```r\nlibrary(dplyr)\nstudents <- data.frame(\n  name   = c(\"Aryan\",\"Sara\",\"Rahul\",\"Priya\",\"Dev\"),\n  branch = c(\"CS\",\"EC\",\"CS\",\"IT\",\"EC\"),\n  cgpa   = c(9.1, 8.5, 7.8, 9.3, 8.1)\n)\n# Branch-wise summary\nstudents %>%\n  group_by(branch) %>%\n  summarise(\n    count    = n(),\n    avg_cgpa = mean(cgpa),\n    toppers  = sum(cgpa >= 9.0)\n  ) %>%\n  arrange(desc(avg_cgpa))\n```",
-                "mcq_topic": "R dplyr filter select mutate summarise pipe operator"
-            },
-            "5. Data Visualisation with ggplot2": {
-                "theory": "**ggplot2** uses a layered *Grammar of Graphics*.\n```r\nlibrary(ggplot2)\nggplot(data=df, aes(x=var1, y=var2)) +\n  geom_point() +\n  geom_line() +\n  labs(title=\"My Plot\", x=\"X axis\", y=\"Y axis\") +\n  theme_minimal()\n```\n**Common geoms:**\n- `geom_bar()` — bar chart\n- `geom_histogram()` — distribution\n- `geom_boxplot()` — box plot\n- `geom_point()` — scatter plot\n- `geom_line()` — line chart\n\n**`aes()`** maps data columns to visual properties (x, y, color, size).",
-                "example": "```r\nlibrary(ggplot2)\ndf <- data.frame(\n  subject = c(\"DS\",\"DBMS\",\"OS\",\"CN\",\"Algo\"),\n  marks   = c(88,75,92,85,79)\n)\nggplot(df, aes(x=reorder(subject,-marks), y=marks, fill=subject)) +\n  geom_bar(stat=\"identity\", width=0.6) +\n  geom_hline(yintercept=80, linetype=\"dashed\", color=\"red\") +\n  labs(title=\"Subject-wise Marks\",\n       x=\"Subject\", y=\"Marks\") +\n  theme_minimal() +\n  theme(legend.position=\"none\")\n```",
-                "mcq_topic": "R ggplot2 visualisation geom aes layers grammar of graphics"
-            },
-            "6. Statistics & Data Analysis": {
-                "theory": "**Descriptive Statistics:**\n```r\nmean(x); median(x); sd(x); var(x)\nquantile(x, 0.25)   # Q1\nsummary(x)          # full summary\n```\n**Hypothesis Testing:**\n```r\nt.test(x, mu=70)          # one-sample t-test\nt.test(x, y)              # two-sample\ncor.test(x, y)            # correlation\nchisq.test(table(a, b))   # chi-square\n```\n**Linear Regression:**\n```r\nmodel <- lm(cgpa ~ attendance + study_hours, data=df)\nsummary(model)\npredict(model, newdata=data.frame(attendance=80, study_hours=5))\n```",
-                "example": "```r\nset.seed(42)\nmarks_A <- c(85,88,92,79,95,87,91,83)\nmarks_B <- c(78,82,75,88,80,77,85,79)\n\ncat(\"Group A mean:\", mean(marks_A), \"\\n\")\ncat(\"Group B mean:\", mean(marks_B), \"\\n\")\ncat(\"Group A SD:  \", sd(marks_A), \"\\n\")\n\n# t-test to compare groups\nresult <- t.test(marks_A, marks_B)\ncat(\"p-value:\", result$p.value, \"\\n\")\nif(result$p.value < 0.05) {\n  cat(\"Significant difference between groups!\\n\")\n} else {\n  cat(\"No significant difference.\\n\")\n}\n```",
-                "mcq_topic": "R statistics t-test hypothesis testing regression correlation"
-            },
-            "7. File I/O & String Handling": {
-                "theory": "**Read/Write CSV:**\n```r\ndf <- read.csv(\"data.csv\", stringsAsFactors=FALSE)\nwrite.csv(df, \"output.csv\", row.names=FALSE)\n```\n**Read Excel:** `readxl::read_excel(\"file.xlsx\")`\n\n**String functions:**\n```r\nnchar(\"MENTORA\")           # 7\ntoupper(\"hello\")           # \"HELLO\"\nsubstr(\"Hello\",1,3)        # \"Hel\"\npaste(\"A\",\"B\",sep=\"-\")    # \"A-B\"\ngsub(\"o\",\"0\",\"hello\")     # \"hell0\"\ngrepl(\"CS\",branches)       # logical vector\n```\n**stringr** package:\n```r\nlibrary(stringr)\nstr_detect(\"MENTORA AI\", \"AI\")   # TRUE\nstr_replace(\"Hello\", \"l\", \"L\")  # \"HeLlo\"\n```",
-                "example": "```r\n# Parse and clean student names\nraw <- c(\" aryan sharma \",\"SARA  ALI\",\"rahul.mehta\")\nclean <- trimws(raw)             # remove spaces\nclean <- toupper(clean)          # uppercase\nclean <- gsub(\"\\\\.\",\" \",clean)  # replace dots\ncat(\"Cleaned:\", clean, \"\\n\")\n\n# Count characters per name\ncharcount <- nchar(clean)\ncat(\"Lengths:\", charcount, \"\\n\")\ncat(\"Longest name:\", clean[which.max(charcount)], \"\\n\")\n```",
-                "mcq_topic": "R file IO CSV read write string manipulation gsub paste"
-            },
-            "8. R for Machine Learning": {
-                "theory": "**caret** package — unified ML interface:\n```r\nlibrary(caret)\n# Train/test split\nset.seed(42)\nidx <- createDataPartition(df$target, p=0.8, list=FALSE)\ntrain <- df[idx,]; test <- df[-idx,]\n# Train model\nmodel <- train(target~., data=train, method=\"rf\")\n# Predict\npreds <- predict(model, test)\nconfusionMatrix(preds, test$target)\n```\n**Popular algorithms in R:**\n- `lm()` / `glm()` — linear/logistic regression\n- `rpart` — decision trees\n- `randomForest` — random forest\n- `e1071` — SVM, Naive Bayes\n- `xgboost` — gradient boosting",
-                "example": "```r\n# Simple logistic regression example\nset.seed(42)\nn <- 100\nstudy_hours  <- rnorm(n, mean=5, sd=2)\nattendance   <- rnorm(n, mean=75, sd=10)\npass <- as.factor(ifelse(study_hours*0.4 + attendance*0.06 + rnorm(n,0,1) > 7, 1, 0))\ndf <- data.frame(study_hours, attendance, pass)\n\nmodel <- glm(pass ~ study_hours + attendance,\n             data=df, family=binomial)\nsummary(model)$coefficients\n# Prediction for new student\nnew_student <- data.frame(study_hours=6, attendance=80)\nprob <- predict(model, new_student, type=\"response\")\ncat(\"Pass probability:\", round(prob,3), \"\\n\")\n```",
-                "mcq_topic": "R machine learning caret logistic regression random forest classification"
+                "mcq_topic": "JavaScript Node.js Express modules npm event loop",
+                "youtube_url": "https://www.youtube.com/watch?v=fBNz5xF-Kx4",
+                "youtube_label": "▶ Node.js Crash Course — Traversy Media",
             },
         }
     },
@@ -1392,13 +2402,13 @@ def _card_mini(col, icon, title, desc, color, mode):
     """Compact card for Group 2 & 3 features on home screen."""
     with col:
         st.markdown(f"""
-        <div style="background:linear-gradient(145deg,#{color}ee,#{color}cc);
-        border-radius:18px;padding:20px 14px 16px;text-align:center;
-        box-shadow:0 8px 24px rgba(0,0,0,0.15);border:1px solid rgba(255,255,255,0.2);
-        min-height:160px;">
-        <span style="font-size:2.4rem;display:block;margin-bottom:8px;">{icon}</span>
-        <div style="font-size:1rem;font-weight:700;color:#fff;margin-bottom:5px;">{title}</div>
-        <div style="font-size:0.75rem;color:rgba(255,255,255,0.88);line-height:1.5;">{desc}</div>
+        <div style="background:linear-gradient(145deg,#{color}dd,#{color}aa);
+        border-radius:16px;padding:18px 12px 14px;text-align:center;
+        box-shadow:0 6px 20px rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.12);
+        min-height:150px;display:flex;flex-direction:column;justify-content:center;">
+        <span style="font-size:2.2rem;display:block;margin-bottom:6px;">{icon}</span>
+        <div style="font-size:0.92rem;font-weight:700;color:#fff;margin-bottom:4px;">{title}</div>
+        <div style="font-size:0.72rem;color:rgba(255,255,255,0.85);line-height:1.5;">{desc}</div>
         </div>""", unsafe_allow_html=True)
         st.markdown("<div style='height:6px'></div>", unsafe_allow_html=True)
         if st.button(f"Open →", key=f"btn_{mode}", use_container_width=True):
@@ -1421,108 +2431,121 @@ def show_home():
         # ── Row 1: 3 cards
         col1, col2, col3 = st.columns(3, gap="large")
 
+        CARD_STYLE = "border-radius:22px;padding:24px 16px 18px 16px;text-align:center;min-height:260px;border:1px solid rgba(255,255,255,0.13);display:flex;flex-direction:column;justify-content:space-between;"
+
         with col1:
-            st.markdown("""
-            <div class="path-card-purple">
-                <span class="card-icon">📊</span>
-                <div class="card-title">Academic Tracker</div>
-                <div class="card-features card-features-purple">
-                    🎯 Auto Weak Subject Detection<br>
-                    📝 IA1 &amp; IA2 Marks Analysis<br>
-                    🗓️ 30-Day Personalised Study Plan<br>
-                    🎓 CGPA Estimator<br>
-                    🤖 AI Feedback &amp; PDF Report
+            st.markdown(f"""
+            <div style="background:linear-gradient(145deg,#1d4ed8,#1e40af,#1e3a8a);{CARD_STYLE}
+            box-shadow:0 10px 36px rgba(29,78,216,0.45);">
+                <div>
+                  <span style="font-size:3rem;display:block;margin-bottom:8px;">📊</span>
+                  <div style="font-size:1.1rem;font-weight:700;color:#fff;margin:0 0 8px 0;">Academic Tracker</div>
+                  <div style="font-size:0.74rem;line-height:1.8;color:#e2e8f0;">
+                    🎯 Weak Subject Detection<br>📝 IA1 &amp; IA2 Analysis<br>
+                    🗓️ 30-Day Study Plan<br>🎓 CGPA Estimator<br>🤖 AI Feedback &amp; PDF
+                  </div>
                 </div>
-                <span class="card-badge">LLaMA 3.3 70B</span>
-                <span class="card-badge">10 Branches</span>
+                <div style="margin-top:10px;">
+                  <span style="background:rgba(255,255,255,0.18);border-radius:20px;padding:3px 10px;font-size:0.68rem;color:#fff;margin:2px;display:inline-block;">LLaMA 3.3 70B</span>
+                  <span style="background:rgba(255,255,255,0.18);border-radius:20px;padding:3px 10px;font-size:0.68rem;color:#fff;margin:2px;display:inline-block;">10 Branches</span>
+                </div>
             </div>
             """, unsafe_allow_html=True)
-            st.markdown("<div style='height:10px'></div>", unsafe_allow_html=True)
+            st.markdown("<div style='height:8px'></div>", unsafe_allow_html=True)
             if st.button("📊 Open Academic Tracker →", key="btn_tracker", use_container_width=True):
                 st.session_state.app_mode = "tracker"; st.rerun()
 
         with col2:
-            st.markdown("""
-            <div class="path-card-cyan">
-                <span class="card-icon">💻</span>
-                <div class="card-title">Coding Practice</div>
-                <div class="card-features card-features-cyan">
-                    🔵 C Programming — 10 Chapters<br>
-                    🟣 C++ with OOP — 4 Chapters<br>
-                    🟡 Python — 5 Chapters<br>
-                    🟠 Java — 3 Chapters<br>
-                    🟢 DSA, SQL &amp; JavaScript
+            st.markdown(f"""
+            <div style="background:linear-gradient(145deg,#0891b2,#0e7490,#155e75);{CARD_STYLE}
+            box-shadow:0 10px 36px rgba(8,145,178,0.45);">
+                <div>
+                  <span style="font-size:3rem;display:block;margin-bottom:8px;">💻</span>
+                  <div style="font-size:1.1rem;font-weight:700;color:#fff;margin:0 0 8px 0;">Coding Practice</div>
+                  <div style="font-size:0.74rem;line-height:1.8;color:#e2e8f0;">
+                    🔵 C Programming — 10 Chapters<br>🟣 C++ with OOP<br>
+                    🟡 Python — 8 Chapters<br>🟠 Java — 7 Chapters<br>🟢 DSA, SQL &amp; JavaScript
+                  </div>
                 </div>
-                <span class="card-badge">Theory</span>
-                <span class="card-badge">Examples</span>
-                <span class="card-badge">AI MCQs</span>
+                <div style="margin-top:10px;">
+                  <span style="background:rgba(255,255,255,0.18);border-radius:20px;padding:3px 10px;font-size:0.68rem;color:#fff;margin:2px;display:inline-block;">Theory</span>
+                  <span style="background:rgba(255,255,255,0.18);border-radius:20px;padding:3px 10px;font-size:0.68rem;color:#fff;margin:2px;display:inline-block;">Examples</span>
+                  <span style="background:rgba(255,255,255,0.18);border-radius:20px;padding:3px 10px;font-size:0.68rem;color:#fff;margin:2px;display:inline-block;">AI MCQs</span>
+                </div>
             </div>
             """, unsafe_allow_html=True)
-            st.markdown("<div style='height:10px'></div>", unsafe_allow_html=True)
+            st.markdown("<div style='height:8px'></div>", unsafe_allow_html=True)
             if st.button("💻 Open Coding Practice →", key="btn_coding", use_container_width=True):
                 st.session_state.app_mode = "coding"; st.rerun()
 
         with col3:
-            st.markdown("""
-            <div style="background:linear-gradient(145deg,#059669,#047857,#065f46);
-            border-radius:24px;padding:30px 20px 24px 20px;text-align:center;
-            box-shadow:0 12px 40px rgba(5,150,105,0.35);border:1px solid rgba(255,255,255,0.2);">
-                <span style="font-size:3.4rem;margin-bottom:12px;display:block;">🗓️</span>
-                <div style="font-size:1.2rem;font-weight:700;color:#ffffff;margin:0 0 10px 0;">Daily Schedule</div>
-                <div style="font-size:0.78rem;line-height:1.8;margin:0 0 14px 0;color:#ffffff;">
+            st.markdown(f"""
+            <div style="background:linear-gradient(145deg,#059669,#047857,#065f46);{CARD_STYLE}
+            box-shadow:0 10px 36px rgba(5,150,105,0.45);">
+                <div>
+                  <span style="font-size:3rem;display:block;margin-bottom:8px;">🗓️</span>
+                  <div style="font-size:1.1rem;font-weight:700;color:#fff;margin:0 0 8px 0;">Daily Schedule</div>
+                  <div style="font-size:0.74rem;line-height:1.8;color:#e2e8f0;">
                     📋 Create daily timetable<br>⏰ Set time slots<br>
-                    ✅ Track task completion<br>📅 View any day's plan
+                    ✅ Track task completion<br>📅 View any day's plan<br>🔢 Priority system
+                  </div>
                 </div>
-                <span style="background:rgba(255,255,255,0.22);border-radius:20px;padding:3px 10px;font-size:0.72rem;color:#fff;margin:2px;display:inline-block;">Tasks</span>
-                <span style="background:rgba(255,255,255,0.22);border-radius:20px;padding:3px 10px;font-size:0.72rem;color:#fff;margin:2px;display:inline-block;">Timetable</span>
+                <div style="margin-top:10px;">
+                  <span style="background:rgba(255,255,255,0.18);border-radius:20px;padding:3px 10px;font-size:0.68rem;color:#fff;margin:2px;display:inline-block;">Tasks</span>
+                  <span style="background:rgba(255,255,255,0.18);border-radius:20px;padding:3px 10px;font-size:0.68rem;color:#fff;margin:2px;display:inline-block;">Timetable</span>
+                </div>
             </div>
             """, unsafe_allow_html=True)
-            st.markdown("<div style='height:10px'></div>", unsafe_allow_html=True)
+            st.markdown("<div style='height:8px'></div>", unsafe_allow_html=True)
             if st.button("🗓️ Open Daily Schedule →", key="btn_schedule", use_container_width=True):
                 st.session_state.app_mode = "schedule"; st.rerun()
 
         st.markdown("<div style='height:16px'></div>", unsafe_allow_html=True)
 
-        # ── Row 2: 2 cards centred
+        # ── Row 2: 2 cards centred — now same height
         _, c4, c5, _ = st.columns([0.5, 2, 2, 0.5], gap="large")
 
         with c4:
-            st.markdown("""
-            <div style="background:linear-gradient(145deg,#dc2626,#b91c1c,#991b1b);
-            border-radius:24px;padding:30px 20px 24px 20px;text-align:center;
-            box-shadow:0 12px 40px rgba(220,38,38,0.35);border:1px solid rgba(255,255,255,0.2);">
-                <span style="font-size:3.4rem;margin-bottom:12px;display:block;">📝</span>
-                <div style="font-size:1.2rem;font-weight:700;color:#ffffff;margin:0 0 10px 0;">Subject Test</div>
-                <div style="font-size:0.78rem;line-height:1.8;margin:0 0 14px 0;color:#ffffff;">
+            st.markdown(f"""
+            <div style="background:linear-gradient(145deg,#dc2626,#b91c1c,#991b1b);{CARD_STYLE}
+            box-shadow:0 10px 36px rgba(220,38,38,0.45);">
+                <div>
+                  <span style="font-size:3rem;display:block;margin-bottom:8px;">📝</span>
+                  <div style="font-size:1.1rem;font-weight:700;color:#fff;margin:0 0 8px 0;">Subject Test</div>
+                  <div style="font-size:0.74rem;line-height:1.8;color:#e2e8f0;">
                     🏫 All Engineering Branches<br>📚 Any Subject you choose<br>
-                    🔢 Custom MCQ count<br>⏱️ Timed Practice Test<br>
-                    📊 Score &amp; Review
+                    🔢 Custom MCQ count<br>⏱️ Timed Practice Test<br>📊 Score &amp; Review
+                  </div>
                 </div>
-                <span style="background:rgba(255,255,255,0.22);border-radius:20px;padding:3px 10px;font-size:0.72rem;color:#fff;margin:2px;display:inline-block;">AI Generated</span>
-                <span style="background:rgba(255,255,255,0.22);border-radius:20px;padding:3px 10px;font-size:0.72rem;color:#fff;margin:2px;display:inline-block;">All Branches</span>
+                <div style="margin-top:10px;">
+                  <span style="background:rgba(255,255,255,0.18);border-radius:20px;padding:3px 10px;font-size:0.68rem;color:#fff;margin:2px;display:inline-block;">AI Generated</span>
+                  <span style="background:rgba(255,255,255,0.18);border-radius:20px;padding:3px 10px;font-size:0.68rem;color:#fff;margin:2px;display:inline-block;">All Branches</span>
+                </div>
             </div>
             """, unsafe_allow_html=True)
-            st.markdown("<div style='height:10px'></div>", unsafe_allow_html=True)
+            st.markdown("<div style='height:8px'></div>", unsafe_allow_html=True)
             if st.button("📝 Open Subject Test →", key="btn_subtest", use_container_width=True):
                 st.session_state.app_mode = "subtest"; st.rerun()
 
         with c5:
-            st.markdown("""
-            <div style="background:linear-gradient(145deg,#d97706,#b45309,#92400e);
-            border-radius:24px;padding:30px 20px 24px 20px;text-align:center;
-            box-shadow:0 12px 40px rgba(217,119,6,0.35);border:1px solid rgba(255,255,255,0.2);">
-                <span style="font-size:3.4rem;margin-bottom:12px;display:block;">🎯</span>
-                <div style="font-size:1.2rem;font-weight:700;color:#ffffff;margin:0 0 10px 0;">GATE Preparation</div>
-                <div style="font-size:0.78rem;line-height:1.8;margin:0 0 14px 0;color:#ffffff;">
+            st.markdown(f"""
+            <div style="background:linear-gradient(145deg,#d97706,#b45309,#92400e);{CARD_STYLE}
+            box-shadow:0 10px 36px rgba(217,119,6,0.45);">
+                <div>
+                  <span style="font-size:3rem;display:block;margin-bottom:8px;">🎯</span>
+                  <div style="font-size:1.1rem;font-weight:700;color:#fff;margin:0 0 8px 0;">GATE Preparation</div>
+                  <div style="font-size:0.74rem;line-height:1.8;color:#e2e8f0;">
                     📅 90-Day Fixed Timetable<br>🤖 AI Exam Date Planner<br>
-                    📆 Weekly Topic Schedule<br>⏰ Daily Study Hours Plan<br>
-                    🏅 All GATE Branches
+                    📆 Weekly Topic Schedule<br>⏰ Daily Study Hours Plan<br>🏅 All GATE Branches
+                  </div>
                 </div>
-                <span style="background:rgba(255,255,255,0.22);border-radius:20px;padding:3px 10px;font-size:0.72rem;color:#fff;margin:2px;display:inline-block;">GATE 2026</span>
-                <span style="background:rgba(255,255,255,0.22);border-radius:20px;padding:3px 10px;font-size:0.72rem;color:#fff;margin:2px;display:inline-block;">AI Planner</span>
+                <div style="margin-top:10px;">
+                  <span style="background:rgba(255,255,255,0.18);border-radius:20px;padding:3px 10px;font-size:0.68rem;color:#fff;margin:2px;display:inline-block;">GATE 2026</span>
+                  <span style="background:rgba(255,255,255,0.18);border-radius:20px;padding:3px 10px;font-size:0.68rem;color:#fff;margin:2px;display:inline-block;">AI Planner</span>
+                </div>
             </div>
             """, unsafe_allow_html=True)
-            st.markdown("<div style='height:10px'></div>", unsafe_allow_html=True)
+            st.markdown("<div style='height:8px'></div>", unsafe_allow_html=True)
             if st.button("🎯 Open GATE Prep →", key="btn_gate", use_container_width=True):
                 st.session_state.app_mode = "gate"; st.rerun()
 
@@ -1561,9 +2584,9 @@ def show_home():
     # ── Footer
     st.markdown("""
     <div style="text-align:center; margin-top:24px; padding:14px;
-    background: linear-gradient(90deg,#f5f3ff,#e0f2fe,#f5f3ff);
-    border-radius:14px; border:1px solid #ddd6fe;">
-        <span style="font-size:0.8rem; color:#7c3aed; letter-spacing:1px;">
+    background: linear-gradient(90deg,#050a15,#0a1020,#050a15);
+    border-radius:14px; border:1px solid #1e3a6b;">
+        <span style="font-size:0.8rem; color:#60a5fa; letter-spacing:1px;">
         🚀 &nbsp; Powered by <b>Groq LLaMA 3.3 70B</b> &nbsp;·&nbsp;
         Built with <b>Python &amp; Streamlit</b> &nbsp;·&nbsp; <b>MENTORA AI</b> © 2025
         </span>
@@ -1655,7 +2678,17 @@ def show_coding():
         <h3 style="color:#fff;font-family:Poppins,sans-serif;margin:0;">{info['icon']} {chap}</h3>
         </div>""", unsafe_allow_html=True)
 
-        t1, t2, t3 = st.tabs(["📖 Theory", "💡 Example", "🧠 MCQ Practice"])
+        # YouTube video link
+        yt_url = content.get("youtube_url", "")
+        yt_label = content.get("youtube_label", "▶ Watch on YouTube")
+        if yt_url:
+            st.markdown(f"""<div class="yt-box">
+            🎬 <b>Video Resource:</b> &nbsp;
+            <a href="{yt_url}" target="_blank">{yt_label}</a>
+            &nbsp; <span style="color:#64748b;font-size:0.75rem;">(opens YouTube)</span>
+            </div>""", unsafe_allow_html=True)
+
+        t1, t2, t3, t4 = st.tabs(["📖 Theory", "💡 Example & Practice", "🧠 MCQ Practice", "🔗 Resources"])
 
         with t1:
             st.markdown(content["theory"])
@@ -1690,11 +2723,11 @@ def show_coding():
                 <div style="font-size:2.2rem;">{em}</div>
                 <h2 style="color:{col};font-family:Poppins,sans-serif;margin:6px 0;">
                 {sc}/{tot} Correct ({pct:.0f}%)</h2>
-                <p style="color:#6b7280;margin:0;">{'Excellent!' if pct>=80 else 'Good effort! Review theory.' if pct>=60 else 'Keep practising!'}</p>
+                <p style="color:#94a3b8;margin:0;">{'Excellent!' if pct>=80 else 'Good effort! Review theory.' if pct>=60 else 'Keep practising!'}</p>
                 </div>""", unsafe_allow_html=True)
-                st.markdown("""<div style='background:#f5f3ff;border:1.5px solid #c4b5fd;
+                st.markdown("""<div style='background:#0f1729;border:1.5px solid #1e3a6b;
                 border-radius:12px;padding:10px 16px;margin:8px 0 4px 0;'>
-                <b style='color:#4c1d95;font-family:Poppins,sans-serif;'>📋 Correct Answers</b>
+                <b style='color:#93c5fd;font-family:Poppins,sans-serif;'>📋 Correct Answers</b>
                 </div>""", unsafe_allow_html=True)
                 for i, q in enumerate(st.session_state.code_mcqs):
                     st.markdown(f"**Q{i+1}.** {q['question']}")
@@ -1702,6 +2735,24 @@ def show_coding():
                     st.divider()
                 if st.button("🔄 Try Again", key="retry_code", use_container_width=True):
                     st.session_state.code_mcqs = []; st.session_state.code_mcq_score = None; st.rerun()
+        with t4:
+            st.markdown("### 🔗 Resources & Quick Reference")
+            if yt_url:
+                st.markdown(f"**📺 Video Tutorial:**\n\n[{yt_label}]({yt_url})")
+            st.markdown("**📚 Recommended Books:**")
+            lang_books = {
+                "C Programming": "• The C Programming Language — Kernighan & Ritchie\n• Let Us C — Yashavant Kanetkar",
+                "C++ Programming": "• C++ Primer — Lippman\n• Effective C++ — Scott Meyers",
+                "Python": "• Automate the Boring Stuff — Al Sweigart\n• Python Crash Course — Eric Matthes",
+                "Java": "• Head First Java — Sierra & Bates\n• Effective Java — Bloch",
+                "DSA (Python)": "• Introduction to Algorithms (CLRS)\n• Grokking Algorithms — Aditya Bhargava",
+                "SQL": "• Learning SQL — Alan Beaulieu\n• SQL Cookbook — Anthony Molinaro",
+                "JavaScript": "• You Don't Know JS — Kyle Simpson\n• Eloquent JavaScript — Marijn Haverbeke",
+            }
+            lang = st.session_state.coding_lang
+            st.markdown(lang_books.get(lang, "• Check your university library"))
+            st.markdown("**🌐 Online Practice:**")
+            st.markdown("• [LeetCode](https://leetcode.com) — Algorithm problems\n• [HackerRank](https://hackerrank.com) — Language tracks\n• [GeeksForGeeks](https://geeksforgeeks.org) — Theory + problems\n• [W3Schools](https://w3schools.com) — Quick reference")
 
 def show_schedule():
     # ── Top nav
@@ -2774,30 +3825,13 @@ def show_countdown():
             label, bg, border = "📅 Upcoming", "#f5f3ff", "#c4b5fd"
             days_str = f"{days_left} days left"
 
-        col_idx = i % min(3, len(exams_sorted))
-        with cols[col_idx]:
-            # Choose big display symbol
-            if days_left < 0:
-                big_display = "✓"
-                big_color   = "#16a34a"
-            elif days_left == 0:
-                big_display = "🎓"
-                big_color   = "#dc2626"
-            elif days_left <= 3:
-                big_display = str(days_left)
-                big_color   = "#dc2626"
-            elif days_left <= 7:
-                big_display = str(days_left)
-                big_color   = "#d97706"
-            else:
-                big_display = str(days_left)
-                big_color   = "#7c3aed"
+        with cols[i % 3]:
             st.markdown(f"""
             <div style="background:{bg};border:2px solid {border};border-radius:18px;
             padding:20px;text-align:center;margin-bottom:14px;">
             <div style="font-size:0.75rem;font-weight:600;color:#6b7280;margin-bottom:6px;">{label}</div>
             <div style="font-size:1.1rem;font-weight:700;color:#1e1e2e;">{exam['name']}</div>
-            <div style="font-size:2.8rem;font-weight:900;color:{big_color};margin:8px 0;">{big_display}</div>
+            <div style="font-size:2.8rem;font-weight:900;color:#7c3aed;margin:8px 0;">{days_left if days_left>=0 else '✓'}</div>
             <div style="font-size:0.85rem;color:#7c3aed;font-weight:600;">{days_str}</div>
             <div style="font-size:0.78rem;color:#9ca3af;margin-top:4px;">{exam_dt.strftime('%d %b %Y')}</div>
             </div>""", unsafe_allow_html=True)
@@ -2857,7 +3891,7 @@ def show_pyq():
     st.session_state.pyq_branch = branch
     subjects = BRANCH_SUBJS.get(branch, [])
     subject = c2.selectbox("📚 Subject", subjects, key="pyq_subj")
-    year = c3.selectbox("📅 Year", ["2025","2024","2023","2022","2021","2020"], key="pyq_yr")
+    year = c3.selectbox("📅 Year", ["2024","2023","2022","2021","2020"], key="pyq_yr")
 
     st.session_state.pyq_subject = subject
     st.session_state.pyq_year    = year
@@ -2916,7 +3950,7 @@ def show_pyq():
                     if st.button(f"🤖 Generate Solution", key=f"pyq_sol_btn_{qi}"):
                         with st.spinner("Generating solution..."):
                             try:
-                                sol_messages = [{"role": "system", "content": "You are an expert engineering professor."}, {"role": "user", "content": f"Provide a detailed solution for this exam question:\n\n{q}"}]
+                                sol_messages = [{"role": "system", "content": "You are an expert engineering professor."}, {"role": "user", "content": f"Provide a detailed solution for this exam question:\n\n{q_text}"}]
                                 res2_raw = safe_chat(sol_messages, temperature=0.3, max_tokens=500)
                                 if res2_raw is None: raise Exception("AI service unavailable. Check API key.")
                                 class _R: pass
@@ -2954,16 +3988,6 @@ def show_syllabus():
         "Digital Electronics": ["Number Systems","Boolean Algebra","Logic Gates","Combinational Circuits","Sequential Circuits","Flip-Flops","Counters & Registers","ADC/DAC","Memory Devices","PLDs & FPGAs"],
         "Thermodynamics": ["Basic Concepts","First Law","Second Law","Entropy","Availability","Gas Power Cycles","Vapour Power Cycles","Refrigeration","Psychrometrics","Combustion"],
         "Structural Analysis": ["Determinate Structures","Virtual Work","Influence Lines","Arches","Cables","Indeterminate Structures","Stiffness Method","Matrix Methods","Dynamic Analysis","Plastic Analysis"],
-        "Statistics & Probability": ["Descriptive Statistics","Probability Basics","Distributions (Normal,Binomial,Poisson)","Hypothesis Testing","Confidence Intervals","Correlation","Regression Analysis","Bayesian Statistics","Sampling Techniques","ANOVA"],
-        "Machine Learning": ["Supervised Learning","Unsupervised Learning","Linear Regression","Logistic Regression","Decision Trees","Random Forest","SVM","K-Means Clustering","Model Evaluation","Overfitting & Regularization"],
-        "Data Visualization": ["matplotlib Basics","seaborn","ggplot2","Bar & Line Charts","Scatter & Bubble Plots","Heatmaps","Box & Violin Plots","Interactive Plots (Plotly)","Dashboard Design","Storytelling with Data"],
-        "Python for DS": ["NumPy Arrays","Pandas DataFrames","Data Cleaning","Handling Missing Values","Data Aggregation","Merging & Joining","String Operations","DateTime Handling","File I/O","Pipelines"],
-        "SQL & Databases": ["SELECT & WHERE","JOINs","GROUP BY & HAVING","Subqueries","Window Functions","Indexes","Stored Procedures","NoSQL Basics","MongoDB Queries","Database Design"],
-        "Feature Engineering": ["Feature Selection","Encoding Categorical Variables","Scaling & Normalization","PCA","Feature Extraction","Handling Imbalanced Data","Outlier Detection","Dimensionality Reduction","Text Features (TF-IDF)","Datetime Features"],
-        "Big Data Analytics": ["Hadoop Ecosystem","MapReduce","Apache Spark","HDFS","Hive & Pig","Kafka Basics","Data Warehousing","ETL Pipelines","Cloud Platforms (AWS/GCP)","Batch vs Stream Processing"],
-        "Deep Learning": ["Neural Networks Basics","Activation Functions","Backpropagation","CNNs","RNNs & LSTMs","Transfer Learning","GANs","Transformers","Hyperparameter Tuning","Model Deployment"],
-        "Time Series Analysis": ["Stationarity","Autocorrelation","ARIMA Models","Seasonal Decomposition","Exponential Smoothing","LSTM for Time Series","Anomaly Detection","Forecasting Metrics","Rolling Statistics","Cross-Validation for TS"],
-        "Data Mining": ["Association Rules (Apriori)","Clustering Algorithms","Classification Techniques","Anomaly Detection","Web Mining","Text Mining","Market Basket Analysis","Pattern Recognition","Evaluation Metrics","Ethical Considerations"],
     }
 
     BRANCH_SUBJS = {
@@ -2975,7 +3999,6 @@ def show_syllabus():
         "Electrical Engineering":     ["Circuit Theory","Electrical Machines","Power Systems","Control Systems","Power Electronics","Measurements","Electromagnetics","Analog Electronics","Digital Electronics","Signals & Systems"],
         "Chemical Engineering":       ["Chemical Reaction Engineering","Mass Transfer","Heat Transfer","Fluid Mechanics","Thermodynamics","Process Control","Chemical Technology","Transport Phenomena","Instrumentation","Safety Engineering"],
         "Biotechnology":              ["Biochemistry","Molecular Biology","Cell Biology","Genetic Engineering","Microbiology","Bioprocess Engineering","Bioinformatics","Immunology","Enzymology","Bioethics"],
-        "Data Science":               ["Statistics & Probability","Machine Learning","Data Visualization","Python for DS","SQL & Databases","Feature Engineering","Big Data Analytics","Deep Learning","Time Series Analysis","Data Mining"],
     }
 
     branches = list(BRANCH_SUBJS.keys())
