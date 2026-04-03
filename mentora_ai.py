@@ -2916,7 +2916,7 @@ def show_pyq():
                     if st.button(f"🤖 Generate Solution", key=f"pyq_sol_btn_{qi}"):
                         with st.spinner("Generating solution..."):
                             try:
-                                sol_messages = [{"role": "system", "content": "You are an expert engineering professor."}, {"role": "user", "content": f"Provide a detailed solution for this exam question:\n\n{q_text}"}]
+                                sol_messages = [{"role": "system", "content": "You are an expert engineering professor."}, {"role": "user", "content": f"Provide a detailed solution for this exam question:\n\n{q}"}]
                                 res2_raw = safe_chat(sol_messages, temperature=0.3, max_tokens=500)
                                 if res2_raw is None: raise Exception("AI service unavailable. Check API key.")
                                 class _R: pass
